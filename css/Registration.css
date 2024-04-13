@@ -13,6 +13,7 @@ form {
     border: 1px solid #ccc;
     border-radius: 5px;
     background-color: #f9f9f9;
+
 }
 
 label {
@@ -51,6 +52,11 @@ button {
 #sub {
     background-color: #007bff;
     color: #fff;
+}
+
+#title
+{
+    color:white;
 }
 
 /*CSS Header*/
