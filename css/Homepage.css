@@ -1,0 +1,111 @@
+nav
+{
+    display: grid;
+    grid-template-rows: 100px ;
+    grid-template-columns: 100px 1610px 130px 100px;
+}
+
+body
+{
+    margin:0;
+}
+
+header
+{
+    background: #FCFEFD;
+}
+
+#logo_connexion
+{
+    height :50px;
+    width : 50px;
+    grid-row-start: 1;
+    grid-row-end: 2;
+    grid-column-start: 4;
+    grid-column-end: 5;
+}
+
+#image
+{
+    height :100px;
+    width : 100px;
+    padding-left: 10px;
+    grid-row-start: 1;
+    grid-row-end: 2;
+    grid-column-start: 1;
+    grid-column-end: 2;
+}
+
+
+h1
+{
+    margin-top: 35px;
+    margin-left: 15px;
+    font-family: 'Lexend Mega';
+    grid-row-start: 1;
+    grid-row-end: 2;
+    grid-column-start: 2;
+    grid-column-end: 3;
+}
+
+#logo_connexion
+{
+    margin-top: 23px;
+    grid-row-start: 1;
+    grid-row-end: 2;
+    grid-column-start: 4;
+    grid-column-end: 5;
+
+}
+
+h2
+{
+    margin-top: 40px;
+    font-family: 'Lexend Mega';
+    font-size: 15px;
+    grid-row-start: 1;
+    grid-row-end: 2;
+    grid-column-start: 3;
+    grid-column-end: 4;
+
+}
+
+#menu, #menu_2
+{
+    font-family: 'Lexend Mega';
+}
+
+
+
+
+/* CSS pour le menu déroulant */
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 120px;
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+    z-index: 1;
+    right: 30px;
+}
+
+.dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+.dropdown-content a:hover {
+    background-color: #ddd;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
