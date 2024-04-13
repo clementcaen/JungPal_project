@@ -1,3 +1,6 @@
+/* CSS Header*/
+
+
 nav
 {
     display: grid;
@@ -79,6 +82,7 @@ h2
 
 
 /* CSS pour le menu déroulant */
+
 .dropdown {
     position: relative;
     display: inline-block;
