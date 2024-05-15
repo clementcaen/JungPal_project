@@ -86,21 +86,12 @@ nav
 {
     display: grid;
     grid-template-rows: 100px ;
-    grid-template-columns: 100px 1700px 130px;
+    grid-template-columns: 100px 1400px 169px;
 }
 
     header {
         background: #FCFEFD;
 
-    }
-
-    #logo_connexion {
-        height: 50px;
-        width: 50px;
-        grid-row-start: 1;
-        grid-row-end: 2;
-        grid-column-start: 4;
-        grid-column-end: 5;
     }
 
     #image {
@@ -129,6 +120,7 @@ nav
     {
         margin-top: 40px;
         font-family: 'Lexend Mega';
+        margin-left: 300px;
         font-weight: bold;
         font-size: 15px;
         grid-row-start: 1;
