@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link href="../css/Profile.css" rel="stylesheet">
+    <link href='https://fonts.googleapis.com/css?family=Lexend Mega' rel='stylesheet'>
+    <title>Your profile</title>
+</head>
+<body>
+<header>
+    <nav>
+        <a href="homepage.html"><img id="image" src="/Images/Logo.jpeg" ></a>
+        <h1>Elderly Companions</h1>
+        <a href="homepage.html"><div id="home">Home</div></a>
+    </nav>
+</header>
+
+
+<div id ="rectangle_name">
+
+
+    <div id="Container_profil">
+        <div id="imageContainer">
+        </div>
+        <div id ="name">Name</div>
+        <div id ="surname">Surname</div>
+
+        <input type="file" id="button" name="photo" accept="image/*" onchange="ajouterPhoto('button', 'imageContainer')">
+
+    </div>
+    <div class="ligne-verticale"></div>
+
+        <div class="button-container">
+            <button class="button">Changing personal information</button>
+            <button class="button">See your contract</button>
+            <button class="button">Your email</button>
+            <button class="button">Report a problem</button>
+        </div>
+
+</div>
+
+
+<div id ="rental_condition">
+        <h2>Rental conditions</h2>
+        <div id ="Party">Party: <input type="text" id="part" placeholder="Yes / No" disabled></div>
+        <div id ="Garden">Garden help: <input type="text" id="gard" placeholder="Yes / No" disabled></div>
+
+</div>
+
+
+
+<div id = "house_rectangle">
+    <h3>Your house</h3>
+    <div id="House_picture"></div>
+    <input type="file" id="button2" name="house-photo" accept="image/*" onchange="ajouterPhoto('button2', 'House_picture')">
+    <div id="container_house">
+        <div id ="numbers_rooms">Number of rooms: <input class = "block" type="text" id="rooms" placeholder="Number of rooms" disabled></div><br>
+        <div id ="price_rooms">Price: <input class = "block" type="text" id="price" placeholder="Price" disabled></div><br>
+        <div id ="area">Area: <input class = "block" type="text" id="size" placeholder="Size of the room" disabled></div><br>
+        <div id ="Internet">Internet: <input class = "block" type="text" id="connexion" placeholder="Yes / No" disabled></div><br>
+        <div id ="Deposit">Deposit: <input class = "block" type="text" id="dep" placeholder="Price of the deposit " disabled></div>
+    </div>
+
+</div>
+
+<div id = "announce">
+    <h4>Your ad</h4>
+    <div id = "button_ad_container">
+    <button class="button_ad">Create your ad</button>
+    <button class="button_ad" id ="unlock">Edit ad information</button>
+    <button class = "button_ad" type="button" id="lockButton" style="display:none;">Confirm the modification</button>
+    <button class="button_ad">Delete your ad</button>
+    <div id="title_explanation">
+        <br>
+        How to create your ad? <br><br>
+    </div>
+    <div id ="explanation">
+    1. Click on Edit ad information<br>
+    2. Confirm the modification<br>
+    3. Click on the button "Create your ad"
+    </div>
+    </div>
+</div>
+
+
+
+
+<script src ="/js/Photo.js"></script>
+<script src ="/js/edit_info.js"></script>
+
+
+
+</body>
+</html>
