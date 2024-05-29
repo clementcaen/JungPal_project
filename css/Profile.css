@@ -53,13 +53,13 @@ a:visited
     color: black;
 }
 
+/*CSS page*/
+
 body {
     background-color: #F5F5F5;
     font-family: 'Lexend Mega';
     margin: 0;
-
-
-}
+    }
 
 #imageContainer {
     width: 200px;
