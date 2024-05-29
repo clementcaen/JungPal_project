@@ -13,9 +13,9 @@ $(document).ready(function () {
                    
                   const myArticle = document.createElement('p');
             
-            myArticle.textContent = 'Un compte correspond déjà à cet Email';
-            myArticle.classList.add('article');
-            section.appendChild(myArticle);
+                myArticle.textContent = 'Un compte correspond déjà à cet Email';
+                myArticle.classList.add('article');
+                section.appendChild(myArticle);
                 }else{
                   location.href="Registration.html";
                 }
