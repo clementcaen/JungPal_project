@@ -18,7 +18,7 @@ Feedback and Rating System: A feedback and rating system for both students and e
 
 The platform incorporates both front-end and back-end technologies to provide a user-friendly interface and support complex functionalities:
 
-Front-end: Developed using HTML, CSS, and JavaScript, the front-end ensures an intuitive interface for seamless interaction with the platform’s features.
+Front-end: Developed using HTML, CSS, and JavaScript, the front-end ensures a very simple and easy-to-use interface for elderly individuals.
 
 Back-end: 
 
