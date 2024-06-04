@@ -14,3 +14,13 @@ Communication Tools: Integrated messaging functionalities to facilitate communic
 
 Feedback and Rating System: A feedback and rating system for both students and elderly individuals to share their experiences. This feature ensures transparency and helps future users make informed decisions.
 
+# Technical Overview
+
+The platform incorporates both front-end and back-end technologies to provide a user-friendly interface and support complex functionalities:
+
+Front-end: Developed using HTML, CSS, and JavaScript, the front-end ensures an intuitive interface for seamless interaction with the platform’s features.
+
+Back-end: 
+
+Database: 
+
