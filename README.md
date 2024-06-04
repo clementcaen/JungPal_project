@@ -18,7 +18,7 @@ The aim of this project is to create a platform to solve the accommodation probl
 
 The platform incorporates both front-end and back-end technologies to provide a user-friendly interface and support complex functionalities:
 
-**Front-end:** Developed using HTML, CSS, and JavaScript, the front-end ensures a very simple and easy-to-use interface for elderly individuals.
+**Front-end:** Developed using HTML, CSS, and JavaScript, the front-end ensures a very simple and easy-to-use interface for elderly people.
 
 **Back-end:** 
 
