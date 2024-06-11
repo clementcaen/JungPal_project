@@ -3,15 +3,16 @@ document.getElementById("login").addEventListener("click", function(event) {
 
     let formData = new FormData(document.querySelector("form"));
 
-    ajaxRequest("POST", "../php/login.php", formData, function(response) {
+    ajaxRequest("POST", "http://localhost/JungPal_project/php/login.php", formData, function(response) {
         if (response.success) {
-            window.location.href = "../html/homepage.html";
+            window.location.href = "http://localhost/JungPal_project/html/homepage.html";
             alert(response.message);
         } else {
             alert("Erreur: " + response.message); // Afficher le message d'erreur
         }
     });
 });
+
 
 function ajaxRequest(method, url, data, callback) {
     let xhr = new XMLHttpRequest();
