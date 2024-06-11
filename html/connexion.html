@@ -25,17 +25,18 @@
 <div class="login-page">
     <div class="form">
         <!-- Login form for user authentication -->
-        <form class="login-form">
+        <form action="../php/login.php" method="post">
             <!-- Input field for email with a placeholder -->
-            <input type="text" placeholder="E-mail" required>
+            <input type="text" name="email" placeholder="E-mail" required>
             <!-- Input field for password with a placeholder -->
-            <input type="password" placeholder="Password" required>
+            <input type="password" name="password" placeholder="Password" required>
             <!-- Login button -->
-            <button>login</button>
+            <button id ="login">login</button>
             <!-- Message for users who are not registered with a link to the registration page -->
             <p class="message">Not registered? <a href="Registration.html">Create an account</a></p>
         </form>
     </div>
 </div>
+<script src="../js/login.js"></script>
 </body>
 </html>
