@@ -1,24 +1,9 @@
 <?php
-error_reporting(E_ALL);
-ini_set('display_errors', 1);
-
 header("Access-Control-Allow-Origin: *");
 header("Access-Control-Allow-Methods: POST, GET, OPTIONS");
 header("Access-Control-Allow-Headers: Content-Type, Authorization");
 
-// Connexion à la base de données (assurez-vous d'adapter ces informations à votre configuration)
-$servername = "localhost";
-$username = "root";
-$password = "";
-$dbname = "jungpal";
-
-// Création de la connexion
-$conn = new mysqli($servername, $username, $password, $dbname);
-
-// Vérifier la connexion
-if ($conn->connect_error) {
-    die("La connexion a échoué : " . $conn->connect_error);
-}
+include("bdd.php");
 
 // Récupération des données du formulaire
 $email = $_POST['email'];
