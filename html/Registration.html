@@ -8,7 +8,7 @@
     <!-- Link to an external font from Google Fonts -->
     <link href='https://fonts.googleapis.com/css?family=Lexend Mega' rel='stylesheet'>
     <!-- Link to the external CSS stylesheet for styling the page -->
-    <link href="http://localhost/JungPal_project/css/registration.css" rel="stylesheet">
+    <link href="../css/registration.css" rel="stylesheet">
     <!-- Title of the web page -->
     <title>Inscription</title>
 </head>
@@ -16,7 +16,7 @@
 <header>
     <nav>
         <!-- Link to the homepage with a logo image -->
-        <a href="homepage.html"><img id="image" src="http://localhost/JungPal_project/Images/Logo.jpeg"></a>
+        <a href="homepage.html"><img id="image" src="../Images/Logo.jpeg"></a>
         <!-- Website title -->
         <h1>Elderly Companions</h1>
         <!-- Link to the homepage -->
@@ -28,7 +28,11 @@
     <h2 id="title">Registration Form</h2>
     <div class="form">
     <!-- Registration form that submits data to a PHP script -->
+<<<<<<< HEAD
     <form action="http://localhost/JungPal_project/php/registration.php" method="post">
+=======
+    <form action="../php/registration.php" method="post" id="inscription-form">
+>>>>>>> d03e9b8e0db832bc2b912a014352d985c9bc0a1b
         <!-- Input field for the name with a label -->
         <label for="name">Name :</label>
         <input type="text" id="name" name="name" required>
