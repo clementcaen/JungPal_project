@@ -2,20 +2,18 @@
   ini_set('display_errors','on');
   error_reporting(E_ALL);
 
-  $mysqlServerIp     = "localhost";
-  $mysqlServerPort   = "3306";
-  $mysqlDbName     = "jungpal";
-  $mysqlDbUser     = "pal";
-  $mysqlDbPwd     = "pal";
-  $mysqlDbCharset   = "UTF8";
+  // Connexion à la base de données (assurez-vous d'adapter ces informations à votre configuration)
+  $servername = "localhost";
+  $username = "root";
+  $password = "";
+  $dbname = "jungpal";
 
-  $mysqlDsn = "mysql:host=".$mysqlServerIp.";port=".$mysqlServerPort.";dbname=".$mysqlDbName.";charset=".$mysqlDbCharset.";";
+  // Création de la connexion
+  $conn = new mysqli($servername, $username, $password, $dbname);
 
-  //Connexion à la BDD
-  try {
-    $pdo = new PDO($mysqlDsn,$mysqlDbUser,$mysqlDbPwd, array(PDO::ATTR_PERSISTENT => true));
-  } catch (PDOException $e) {
-    echo "Failed to get DB handle: " . $e->getMessage() . "\n";
-    exit;
-  } 
+  // Vérifier la connexion
+  if ($conn->connect_error) {
+      die("La connexion a échoué : " . $conn->connect_error);
+  }
+
 ?>
