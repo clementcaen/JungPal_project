@@ -1,9 +1,16 @@
 <?php
+error_reporting(E_ALL);
+ini_set('display_errors', 1);
+
+header("Access-Control-Allow-Origin: *");
+header("Access-Control-Allow-Methods: POST, GET, OPTIONS");
+header("Access-Control-Allow-Headers: Content-Type, Authorization");
+
 // Connexion à la base de données (assurez-vous d'adapter ces informations à votre configuration)
 $servername = "localhost";
 $username = "root";
 $password = "";
-$dbname = "elderly";
+$dbname = "jungpal";
 
 // Création de la connexion
 $conn = new mysqli($servername, $username, $password, $dbname);
@@ -24,7 +31,7 @@ $result = $conn->query($sql);
 if ($result->num_rows > 0) {
     // L'utilisateur est authentifié avec succès
     $row = $result->fetch_assoc();
-    $nom_utilisateur = $row['first_name'];
+    $nom_utilisateur = $row['surname'];
     $response = array("success" => true, "message" => "Bienvenue, " . $nom_utilisateur);
 } else {
     // Les informations de connexion sont incorrectes
