@@ -10,7 +10,7 @@ header("Access-Control-Allow-Headers: Content-Type, Authorization");
 $servername = "localhost";
 $username = "root";
 $password = "";
-$dbname = "jungpal";
+$dbname = "elderly";
 
 // Création de la connexion
 $conn = new mysqli($servername, $username, $password, $dbname);
@@ -31,7 +31,7 @@ $result = $conn->query($sql);
 if ($result->num_rows > 0) {
     // L'utilisateur est authentifié avec succès
     $row = $result->fetch_assoc();
-    $nom_utilisateur = $row['surname'];
+    $nom_utilisateur = $row['first_name'];
     $response = array("success" => true, "message" => "Bienvenue, " . $nom_utilisateur);
 } else {
     // Les informations de connexion sont incorrectes
