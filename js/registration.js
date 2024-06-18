@@ -1,31 +1,34 @@
 document.getElementById("signup").addEventListener("click", function(event) {
     event.preventDefault();
 
-    let formData = new FormData(document.querySelector("form"));
+    let formData = new FormData(document.querySelector("form-container"));
 
     ajaxRequest("POST", "http://localhost/JungPal_project/php/registration.php", formData, function(response) {
         if (response.success) {
-            window.location.href = "http://localhost/JungPal_project/html/homepage.html";
-            alert(response.message);
+            window.location.href = "http://localhost/JungPal_project/html/connexion.html";
         } else {
-            alert("Erreur: " + response.message); // Afficher le message d'erreur
+            alert("Erreur: " + response.message); // Display error message
         }
     });
 });
-
 
 function ajaxRequest(method, url, data, callback) {
     let xhr = new XMLHttpRequest();
     xhr.open(method, url);
     xhr.onload = function() {
         if (xhr.status === 200) {
-            callback(JSON.parse(xhr.responseText));
+            try {
+                let response = JSON.parse(xhr.responseText);
+                callback(response);
+            } catch (e) {
+                alert("Erreur de traitement de la réponse du serveur.");
+            }
         } else {
-            alert("Erreur de requête: " + xhr.status); // Afficher le code d'erreur HTTP
+            alert("Erreur de requête: " + xhr.status); // Display HTTP error code
         }
     };
     xhr.onerror = function() {
-        alert("Erreur de connexion au serveur."); // Afficher une erreur en cas d'échec de la requête
+        alert("Erreur de connexion au serveur."); // Display connection error
     };
     xhr.send(data);
 }

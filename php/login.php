@@ -1,41 +1,33 @@
 <?php
-error_reporting(E_ALL);
-ini_set('display_errors', 1);
+include("bdd.php");
 
-header("Access-Control-Allow-Origin: *");
-header("Access-Control-Allow-Methods: POST, GET, OPTIONS");
-header("Access-Control-Allow-Headers: Content-Type, Authorization");
+if (isset($_POST['email']) && isset($_POST['password'])) {
+    // Récupération des données du formulaire
+    $email = $_POST['email'];
+    $password = $_POST['password'];
 
-// Connexion à la base de données (assurez-vous d'adapter ces informations à votre configuration)
-$servername = "localhost";
-$username = "root";
-$password = "";
-$dbname = "elderly";
+    // Requête SQL pour vérifier les informations de connexion
+    $sql = "SELECT * FROM users WHERE email='$email' AND password='$password'";
+    $result = $conn->query($sql);
 
-// Création de la connexion
-$conn = new mysqli($servername, $username, $password, $dbname);
+    if ($result->num_rows > 0) {
+        // L'utilisateur est authentifié avec succès
+        $row = $result->fetch_assoc();
+        $nom_utilisateur = $row['name'];
 
-// Vérifier la connexion
-if ($conn->connect_error) {
-    die("La connexion a échoué : " . $conn->connect_error);
-}
+        // Démarrer la session et stocker les informations de l'utilisateur
+        session_start();
+        $_SESSION['user_id'] = $row['id'];
+        $_SESSION['user_name'] = $nom_utilisateur;
 
-// Récupération des données du formulaire
-$email = $_POST['email'];
-$mot_de_passe = $_POST['password'];
-
-// Requête SQL pour vérifier les informations de connexion
-$sql = "SELECT * FROM users WHERE email='$email' AND password='$mot_de_passe'";
-$result = $conn->query($sql);
-
-if ($result->num_rows > 0) {
-    // L'utilisateur est authentifié avec succès
-    $row = $result->fetch_assoc();
-    $nom_utilisateur = $row['first_name'];
-    $response = array("success" => true, "message" => "Bienvenue, " . $nom_utilisateur);
+        $response = array("success" => true, "message" => "Bienvenue, " . $nom_utilisateur);
+    } else {
+        // Les informations de connexion sont incorrectes
+        $response = array("success" => false, "message" => "Identifiants incorrects. Veuillez réessayer.");
+    }
 } else {
-    // Les informations de connexion sont incorrectes
-    $response = array("success" => false, "message" => "Identifiants incorrects. Veuillez réessayer.");
+    // Les données du formulaire ne sont pas complètes
+    $response = array("success" => false, "message" => "Veuillez fournir une adresse email et un mot de passe.");
 }
 
 // Fermer la connexion à la base de données

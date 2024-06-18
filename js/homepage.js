@@ -1,19 +1,14 @@
-document.getElementById("login").addEventListener("click", function(event) {
-    event.preventDefault();
-
-    let formData = new FormData(document.querySelector("form"));
-
-    ajaxRequest("POST", "http://localhost/JungPal_project/php/login.php", formData, function(response) {
-        if (response.success) {
-            // Rediriger vers la page d'accueil en cas de succès
-            window.location.href = "http://localhost/JungPal_project/html/homepage.html";
-            alert(response.message);
+function checkSession() {
+    ajaxRequest("GET", "http://localhost/JungPal_project/php/check_session.php", null, function(response) {
+        if (!response.loggedIn) {
+            // Rediriger vers la page de connexion si l'utilisateur n'est pas connecté
+            window.location.href = "http://localhost/JungPal_project/html/connexion.html";
         } else {
-            // Afficher le message d'erreur en cas d'échec
-            alert("Erreur: " + response.message);
+            // Afficher le nom de l'utilisateur connecté
+            console.log("Utilisateur connecté : " + response.user_name);
         }
     });
-});
+}
 
 function ajaxRequest(method, url, data, callback) {
     let xhr = new XMLHttpRequest();

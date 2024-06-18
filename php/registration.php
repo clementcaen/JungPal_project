@@ -1,9 +1,16 @@
 <?php
 include("bdd.php");
 
+session_start();
+if (isset($_SESSION['user_id'])) {
+    // Rediriger vers la page de connexion si l'utilisateur n'est pas connecté
+    header("Location: login.php");
+    exit();
+}
+
 //remplissage de toutes les variables de création de compte
-$name = $_POST['name'];
-$surname = $_POST['surname'];
+$name = $_POST['nom'];
+$surname = $_POST['prenom'];
 $gender = $_POST['Gdr'];
 $dob = $_POST['birth'];
 $address = $_POST['Addr'];
@@ -18,13 +25,13 @@ $result = $conn->query($sql);
 
 if ($result->num_rows > 0) {
         // Le compte existe déjà
-        $response = array("success" => true, "message" => "Le compte existe déjà.");
+        $response = array("success" => false);
 } else {
         // L'utilisateur est authentifié avec succès
         // Requête SQL pour vérifier les informations de connexion
         $sql = "INSERT INTO users(name, surname, gender, dob, address, city, postal_code, email, password) VALUES ('$name', '$surname', '$gender', '$dob', '$address', '$city', '$postal_code', '$email', '$password')";
         $conn->query($sql);
-        $response = array("success" => false, "message" => "Compte créer avec succès");
+        $response = array("success" => true, "message" => "Compte créer avec succès");
 
 }
 
