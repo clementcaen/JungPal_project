@@ -1,8 +1,8 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fr">
 <head>
     <!-- Link to the external font from Google Fonts -->
-    <link href='https://fonts.googleapis.com/css?family=Lexend Mega' rel='stylesheet'>
+    <link href='https://fonts.googleapis.com/css?family=Lexend+Mega' rel='stylesheet'>
     <!-- Set the character encoding of the document to UTF-8 -->
     <meta charset="UTF-8">
     <!-- Link to the favicon image for the webpage -->
@@ -10,31 +10,36 @@
     <!-- Link to the Font Awesome library for icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
     <!-- Link to the external CSS stylesheet for styling the page -->
-    <link href="../css/Homepage.css" rel="stylesheet">
+    <link href="../css/homepage_connected.css" rel="stylesheet">
     <!-- Title of the web page -->
     <title>Elderly Companions</title>
 </head>
-
 <body>
 <header>
     <nav>
         <!-- Link to the homepage with a logo image -->
-        <a href="homepage.html"><img id="logo" src="../Images/Logo.jpeg"></a>
+        <a href="homepage_connected.html"><img id="logo" src="/Images/Logo.jpeg"></a>
         <!-- Website title -->
         <h1>Elderly Companions</h1>
         <!-- Navigation link for the About Us section -->
         <div id="about">About us</div>
-        <!-- Link to the sign-in page -->
-        <a href="connexion.html"><div id="connexion">Sign in</div></a>
-        <!-- Link to the registration page -->
-        <a href="registration.html"><div id="register">Register</div></a>
+
+        <!-- Profile logo with dropdown menu -->
+        <div class="profile-menu">
+            <img id="logo_connexion" src="/Images/connexion_logo.png" class="profile-logo">
+            <div class="dropdown-menu">
+                <a href="Profile.html">Profil</a>
+                <a href="logout.html">Déconnexion</a>
+            </div>
+        </div>
+
         <!-- Placeholder for the Chatbox feature -->
         <div id="Chatbox">Chatbox</div>
     </nav>
 </header>
 
 <!-- Main image on the homepage -->
-<img id="image_home" src="../Images/Home_photo.png">
+<img id="image_home" src="/Images/Home_photo.png">
 <div id="rectangle">
     <!-- Search bar section -->
     <div id="place">
@@ -54,28 +59,10 @@
     </div>
 </div>
 
-<div id="title_offer">
-    <p>Our offers</p>
-</div>
 
-<div id="ad1">
-
-</div>
-
-<div id="ad2">
-
-</div>
-
-<div id="ad3">
-
-</div>
-
-<button id="button_offers">Discover more offers</button>
-
-<div class="custom-hr1"></div>
 
 <div id="title_chatbox">
-<p>The chatbox</p>
+    <p>The chatbox</p>
 </div>
 <img id="logo_chat" src="../Images/chat-bulle.png">
 
@@ -85,9 +72,9 @@
     </p>
 </div>
 
-<button id="button_chatbox">Join the chatbox</button>
+<button id="button_chatbox" type="submit">Join the chatbox</button>
 
-<div class="custom-hr2"></div>
+<div class="custom-hr"></div>
 
 <div id="description">
     Who are we?
@@ -101,8 +88,9 @@
         Furthermore, after reading many articles about the loneliness of elderly people in Germany, we noticed that in most cases these people were alone. To solve these problems, we decided to create a website that would allow students
         to live among elderly people. Thanks to this, students will be able to find a place to live and at the same time bring companionship to these people.
     </p>
-</div>
     <img id="logo_descr" src="../Images/Logo-footer.png">
+
+</div>
 
 
 <footer>
@@ -116,7 +104,7 @@
     </div>
     <!-- Credit details in the footer -->
     <div class="credit_bis">
-        Website design and development: Maxime CAYMAN and Maryline LE BOT
+        Website design and development: Maxime CAYMAN and Maryline LEBOT
     </div>
     <!-- Contact section in the footer -->
     <div class="cont">
@@ -131,6 +119,5 @@
         E-mail:
     </div>
 </footer>
-<script src="../js/scroll.js"></script>
 </body>
 </html>

@@ -1,50 +1,32 @@
-/* CSS Header*/
-
-
-nav
-{
+nav {
     display: grid;
-    grid-template-rows: 100% ;
-    grid-template-columns: 3% 65% 9% 8% 8% 7%;
+    grid-template-rows: 100px;
+    grid-template-columns: 5% 72% 9% 8% 6%;
 }
 
-body
-{
-    margin:0;
+body {
+    margin: 0;
     display: grid;
-    grid-template-rows: 4.6% 20% 2% 21% 24% 19%;
-    background-color: #FCFEFD;
-
+    grid-template-rows: 7% 24% 2% 32% 25%;
 }
 
-header
-{
+header {
     background: #FCFEFD;
-    grid-row-start: 1;
-    grid-row-end: 2;
-    grid-column-start: 1;
-    grid-column-end: 2;
-
 }
 
-
-
-#logo
-{
+#logo {
     height :100%;
-    width : 130%;
-    padding-left: 10%;
+    width : 100%;
+    padding-left: 15px;
     grid-row-start: 1;
     grid-row-end: 2;
     grid-column-start: 1;
     grid-column-end: 2;
 }
 
-
-h1
-{
-    margin-top: 1.9%;
-    margin-left: 2%;
+h1 {
+    margin-top: 35px;
+    margin-left: 15px;
     font-family: 'Lexend Mega';
     grid-row-start: 1;
     grid-row-end: 2;
@@ -52,9 +34,8 @@ h1
     grid-column-end: 3;
 }
 
-#Chatbox
-{
-    margin-top: 19%;
+#Chatbox {
+    margin-top: 40px;
     font-family: 'Lexend Mega';
     font-weight: bold;
     font-size: 15px;
@@ -64,9 +45,14 @@ h1
     grid-column-end: 4;
 }
 
-#register
-{
-    margin-top: 21%;
+a:link,
+a:visited {
+    text-decoration: none;
+    color: black;
+}
+
+#about {
+    margin-top: 40px;
     font-family: 'Lexend Mega';
     font-weight: bold;
     font-size: 15px;
@@ -76,48 +62,62 @@ h1
     grid-column-end: 5;
 }
 
-a:link,
-a:visited
-{
-    text-decoration: none;
-    color: black;
-}
-
-#connexion
-{
-    margin-top: 21%;
-    font-family: 'Lexend Mega';
-    font-weight: bold;
-    font-size: 15px;
+#logo_connexion {
+    padding-top: 28px;
+    height: 45%;
+    width: 40%;
+    cursor: pointer;
     grid-row-start: 1;
     grid-row-end: 2;
     grid-column-start: 5;
     grid-column-end: 6;
+    padding-left: 12px;
 }
 
-#about
-{
-    margin-top: 24%;
+.profile-menu {
+    position: relative;
+    display: inline-block;
+}
+
+.dropdown-menu {
+    display: none;
+    position: absolute;
+    top: 85%;
+    right: 35%;
+    background-color: white;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+    min-width: 160px;
+    border-radius: 4px;
     font-family: 'Lexend Mega';
     font-weight: bold;
-    font-size: 15px;
-    grid-row-start: 1;
-    grid-row-end: 2;
-    grid-column-start: 6;
-    grid-column-end: 7;
+    font-size: 12px;
+}
 
+.dropdown-menu a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    border-bottom: 1px solid #ddd;
+}
+
+.dropdown-menu a:hover {
+    background-color: #f1f1f1;
+}
+
+.profile-menu:hover .dropdown-menu {
+    display: block;
 }
 
 /*CSS page*/
 
-#image_home
-{
-    height :100%;
-    width : 100%;
+#image_home {
+    height: 100%;
+    width: 100%;
 }
 
-#rectangle
-{
+#rectangle {
     width: 1000px;
     height: 60px;
     background-color: #F5F5F5;
@@ -127,17 +127,13 @@ a:visited
     grid-row-end: 4;
     justify-self: center;
     align-self: center;
+    margin-bottom: 40px;
     display: grid;
-    margin-bottom: 25px;
     grid-template-rows: 100% ;
     grid-template-columns: 30% 20% 30% 20%;
-
-
 }
 
-#place
-{
-
+#place {
     grid-row-start: 1;
     grid-row-end: 2;
     grid-column-start: 1;
@@ -146,19 +142,16 @@ a:visited
     align-self: center;
 }
 
-#bar_place
-{
+#bar_place {
     font-family: 'Lexend Mega';
     border: 2px solid #F5F5F5;
     border-radius: 5px;
     width: 200px;
     height: 30px;
     text-align: center;
-
 }
 
-#date
-{
+#date {
     grid-row-start: 1;
     grid-row-end: 2;
     grid-column-start: 2;
@@ -167,20 +160,16 @@ a:visited
     align-self: center;
 }
 
-#day
-{
+#day {
     font-family: 'Lexend Mega';
     border: 2px solid #F5F5F5;
     border-radius: 5px;
     width: 200px;
     height: 30px;
     text-align: center;
-
-
 }
 
-#price
-{
+#price {
     grid-row-start: 1;
     grid-row-end: 2;
     grid-column-start: 3;
@@ -189,21 +178,16 @@ a:visited
     align-self: center;
 }
 
-
-
-#cost
-{
+#cost {
     font-family: 'Lexend Mega';
     border: 2px solid #F5F5F5;
     border-radius: 5px;
     width: 200px;
     height: 30px;
     text-align: center;
-
 }
 
-#search
-{
+#search {
     grid-row-start: 1;
     grid-row-end: 2;
     grid-column-start: 4;
@@ -213,8 +197,7 @@ a:visited
     margin-right: 45px;
 }
 
-#button_search
-{
+#button_search {
     font-family: 'Lexend Mega';
     background-color: #E18B42;
     border-radius: 5px;
@@ -224,105 +207,19 @@ a:visited
     height: 30px;
 }
 
-#title_offer
+#title_chatbox
 {
     font-family: 'Lexend Mega';
     font-weight: bold;
     font-size: 20px;
     justify-self: center;
-    grid-row-start: 4;
-    grid-row-end: 5;
-    grid-column-start: 1;
-    grid-column-end: 2;
-}
-
-#ad1
-{
-    width: 27%;
-    height: 21%;
-    border-radius: 5px;
-    background-color: #F5F5F5;
-    grid-row-start: 4;
-    grid-row-end: 5;
-    grid-column-start: 1;
-    grid-column-end: 2;
-    position: absolute;
-    margin-top: 29%;
-    margin-left: 3%;
-
-}
-
-#ad2
-{
-    width: 27%;
-    height: 21%;
-    border-radius: 5px;
-    background-color: #F5F5F5;
-    grid-row-start: 4;
-    grid-row-end: 5;
-    grid-column-start: 1;
-    grid-column-end: 2;
-    position: absolute;
-    margin-top: 29%;
-    margin-left: 36.5%;
-}
-
-#ad3
-{
-    width: 27%;
-    height: 21%;
-    border-radius: 5px;
-    background-color: #F5F5F5;
-    grid-row-start: 4;
-    grid-row-end: 5;
-    grid-column-start: 1;
-    grid-column-end: 2;
-    position: absolute;
-    margin-top: 29%;
-    margin-left: 70%;
-}
-
-#button_offers
-{
-    font-family: 'Lexend Mega';
-    background-color: #E18B42;
-    border-radius: 5px;
-    color: white;
-    border: 2px solid #E18B42;
-    width: 13%;
-    height: 8%;
-    grid-row-start: 4;
-    grid-row-end: 5;
-    grid-column-start: 1;
-    grid-column-end: 2;
-    justify-self: center;
-    margin-top: 16%;
-}
-
-.custom-hr1
-{
-    height: 1px;
-    background-color: black;
-    margin-top: 19%;
-    margin-left: 25%;
-    width: 50%;
-    grid-row-start: 4;
-    grid-row-end: 5;
-    grid-column-start: 1;
-    grid-column-end: 2;
-
-}
-
-#title_chatbox
-{
-    font-family: 'Lexend Mega';
-    font-weight: bold;
-    font-size: 25px;
-    justify-self: center;
+    padding-bottom: 15px;
+    padding-top: 20px;
     text-align: justify;
-    justify-self: center;
-    grid-row-start: 5;
-    grid-row-end: 6;
+    padding-left: 200px;
+    padding-right: 200px;
+    grid-row-start: 4;
+    grid-row-end: 5;
     grid-column-start: 1;
     grid-column-end: 2;
 }
@@ -331,15 +228,15 @@ a:visited
 {
     font-family: 'Lexend Mega';
     font-weight: bold;
-    font-size: 14px;
+    font-size: 12px;
     justify-self: center;
     padding-bottom: 15px;
-    padding-top: 12%;
+    padding-top: 235px;
     text-align: center;
-    padding-left: 15%;
-    padding-right: 15%;
-    grid-row-start: 5;
-    grid-row-end: 6;
+    padding-left: 200px;
+    padding-right: 200px;
+    grid-row-start: 4;
+    grid-row-end: 5;
     grid-column-start: 1;
     grid-column-end: 2;
 }
@@ -348,12 +245,15 @@ a:visited
 {
     height :30%;
     width : 8%;
-    grid-row-start: 5;
-    grid-row-end: 6;
+    grid-row-start: 4;
+    grid-row-end: 5;
     grid-column-start: 1;
     grid-column-end: 2;
     justify-self: center;
-    padding-top: 4.5%;
+    padding-top: 85px;
+
+
+    margin-bottom: 15px;
 }
 
 #button_chatbox
@@ -363,25 +263,25 @@ a:visited
     border-radius: 5px;
     color: white;
     border: 2px solid #E18B42;
-    width: 13%;
-    height: 8%;
-    grid-row-start: 5;
-    grid-row-end: 6;
+    width: 175px;
+    height: 40px;
+    grid-row-start: 4;
+    grid-row-end: 5;
     grid-column-start: 1;
     grid-column-end: 2;
     justify-self: center;
-    margin-top: 17%;
+    margin-top: 325px;
 }
 
-.custom-hr2
+.custom-hr
 {
     height: 1px;
     background-color: black;
     margin-top: 22%;
     margin-left: 25%;
     width: 50%;
-    grid-row-start: 5;
-    grid-row-end: 6;
+    grid-row-start: 4;
+    grid-row-end: 5;
     grid-column-start: 1;
     grid-column-end: 2;
 
@@ -391,143 +291,153 @@ a:visited
 {
     font-family: 'Lexend Mega';
     font-weight: bold;
-    font-size: 25px;
+    font-size: 22px;
     text-align: center;
-    grid-row-start: 6;
-    grid-row-end: 7;
+    grid-row-start: 5;
+    grid-row-end: 6;
     grid-column-start: 1;
     grid-column-end: 2;
-    margin-top: 1%;
 }
 
 #text
 {
     font-family: 'Lexend Mega';
     font-weight: bold;
-    font-size: 14px;
+    font-size: 12px;
     justify-self: center;
-    padding-top: 4%;
+    padding-top: 70px;
     text-align: justify;
-    padding-left: 15%;
-    padding-right: 15%;
-    grid-row-start: 6;
-    grid-row-end: 7;
+    padding-left: 200px;
+    padding-right: 200px;
+    grid-row-start: 5;
+    grid-row-end: 6;
     grid-column-start: 1;
     grid-column-end: 2;
 }
 
 #logo_descr
 {
-    height :32%;
-    width : 29%;
-    padding-top: 9%;
-    grid-row-start: 6;
-    grid-row-end: 7;
+    height :120px;
+    width : 600px;
+    padding-top: 20px;
+    grid-row-start: 5;
+    grid-row-end: 6;
     grid-column-start: 1;
     grid-column-end: 2;
-    justify-self: center;
-    align-self: center;
+    margin-left: 430px;
 
 }
 
 /*CSS footer*/
 
-footer
-{
-    display :grid;
-    grid-template-columns: 34% 14% 20% 20%;
-    grid-template-rows: 14% 80% ;
+footer {
+    display: grid;
+    grid-template-columns: 700px 265px 340px 400px;
+    grid-template-rows: 40px 130px;
     position: relative;
     font-size: .8em;
     background-color: #FCFEFD;
     border-top: 1px solid grey;
-
-
-
 }
 
 .vertical-line {
     position: absolute;
-    left: 31%;
+    left: 32%;
     border-left: 1px solid black;
     height: 70%;
-    top : 15%;
+    top: 24px;
 }
 
-.credit
-{
-    font-size: 20px;
+.credit {
+    font-size: x-large;
     text-align: left;
-    color : black;
+    color: black;
     grid-row-start: 1;
     grid-row-end: 2;
     grid-column-start: 2;
     grid-column-end: 3;
-    padding-top: 7.5%;
-
+    padding-top: 25px;
     font-family: 'Lexend Mega';
-
 }
 
-.credit_bis
-{
+.credit_bis {
     font-size: 10px;
     grid-row-start: 2;
     grid-row-end: 3;
     grid-column-start: 2;
     grid-column-end: 3;
     color: black;
-    padding-top: 13%;
+    padding-top: 30px;
     font-family: 'Lexend Mega';
-
-
 }
 
-.cont
-{
-    font-size: 20px;
-    margin-left: 17%;
-    color : black;
+.cont {
+    font-size: x-large;
+    margin-left: 70px;
+    color: black;
     grid-row-start: 1;
     grid-row-end: 2;
     grid-column-start: 3;
     grid-column-end: 4;
-    padding-top: 5%;
+    padding-top: 25px;
     font-family: 'Lexend Mega';
-
-
 }
 
-
-.cont_bis
-{
+.cont_bis {
     grid-row-start: 2;
     grid-row-end: 3;
     grid-column-start: 3;
     grid-column-end: 4;
-    margin-left: 18%;
+    margin-left: 70px;
     font-size: 10px;
     color: black;
-    padding-top: 9%;
+    padding-top: 30px;
     font-family: 'Lexend Mega';
-
-
 }
 
-#logo_footer
-{
+#logo_footer {
     grid-row-start: 2;
     grid-row-end: 3;
     grid-column-start: 1;
     grid-column-end: 2;
-    height :90%;
-    width : 75%;
-    padding-left: 7%;
+    height: 100px;
+    width: 500px;
+    padding-left: 60px;
 }
 
+@media screen and (min-width: 2000px) {
+    body {
+        width: 100%;
+    }
 
+    header {
+        width: 100%;
+    }
 
+    nav {
+        display: grid;
+        grid-template-rows: 100px;
+        grid-template-columns: 100px 1850px 160px 160px 145px 130px;
+    }
 
+    #image_home {
+        width: 100%;
+    }
 
+    footer {
+        display: grid;
+        grid-template-columns: 700px 265px 340px 1000px;
+        grid-template-rows: 40px 130px;
+        position: relative;
+        font-size: .8em;
 
+    }
 
+    .vertical-line {
+        position: absolute;
+        left: 25%;
+        border-left: 1px solid black;
+        height: 70%;
+        top: 24px;
+    }
+}

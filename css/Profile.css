@@ -3,18 +3,19 @@
 nav
 {
     display: grid;
-    grid-template-rows: 100px ;
-    grid-template-columns: 100px 1400px 169px;
+    grid-template-rows: 100%;
+    grid-template-columns: 4% 91% 2%;
 }
 
 header {
     background: #FCFEFD;
+
 }
 
 #image {
-    height: 100px;
-    width: 100px;
-    padding-left: 10px;
+    height :100%;
+    width : 95%;
+    padding-left: 10%;
     grid-row-start: 1;
     grid-row-end: 2;
     grid-column-start: 1;
@@ -23,8 +24,7 @@ header {
 
 
 h1 {
-    margin-top: 35px;
-    margin-left: 15px;
+    margin-top: 1.5%;
     font-family: 'Lexend Mega';
     grid-row-start: 1;
     grid-row-end: 2;
@@ -35,10 +35,9 @@ h1 {
 
 #home
 {
-    margin-top: 40px;
+    margin-top: 80%;
     font-family: 'Lexend Mega';
     font-weight: bold;
-    margin-left: 300px;
     font-size: 15px;
     grid-row-start: 1;
     grid-row-end: 2;
@@ -59,11 +58,23 @@ body {
     background-color: #F5F5F5;
     font-family: 'Lexend Mega';
     margin: 0;
+    padding: 0;
+
+
     }
 
+#grid
+{
+    display: grid;
+    grid-template-rows: 50% 50%;
+    grid-template-columns: 50% 50%;
+    justify-self: center;
+    align-self: center;
+}
+
 #imageContainer {
-    width: 200px;
-    height: 200px;
+    width: 70%;
+    height: 100%;
     border-radius: 50%; /* Créer un conteneur rond */
     overflow: hidden;
     border: 2px solid #ccc;
@@ -78,6 +89,7 @@ body {
     width: 100%;
     height: auto;
     border-radius: 50%; /* Assurer que l'image est aussi ronde que son conteneur */
+    object-fit: cover;
 }
 
 #name
@@ -87,7 +99,7 @@ body {
     grid-column-start: 1;
     grid-column-end: 2;
     justify-self: center;
-    margin-top: 20px;
+    margin-top: 7%;
 
 }
 
@@ -113,8 +125,8 @@ body {
 
 input[type="file"] {
     color: transparent;
-    width: 150px;
-    height: 40px;
+    width: 55%;
+    height: 100%;
     cursor: pointer;
     border: none;
     border-radius: 5px;
@@ -147,8 +159,8 @@ input[type="file"]::before {
 
 #button2[type="file"] {
     color: transparent;
-    width: 150px;
-    height: 40px;
+    width: 15%;
+    height: 100%;
     cursor: pointer;
     border: none;
     border-radius: 5px;
@@ -181,10 +193,10 @@ input[type="file"]::before {
 #Container_profil
 {
     display: grid;
-    grid-template-rows: 200px 50px 40px 50px;
-    grid-template-columns: 300px;
+    grid-template-rows: 63% 14% 8% 13%;
+    grid-template-columns: 100%;
     justify-self: center;
-    margin-top: 30px;
+    margin-top: 7%;
     grid-row-start: 1;
     grid-row-end: 2;
     grid-column-start: 1;
@@ -193,41 +205,49 @@ input[type="file"]::before {
 
 .ligne-verticale {
     border-left: 2px solid #F5F5F5;
-    height: 300px;
+    height: 75%;
     grid-row-start: 1;
     grid-row-end: 2;
     grid-column-start: 2;
     grid-column-end: 3;
-    margin-top: 50px;
+    margin-top: 9%;
 }
 
 #rectangle_name
 {
-    width: 940px;
-    height: 390px;
-    margin-top: 25px;
-    margin-left: 60px;
+    width: 100%;
+    height: 100%;
+    margin-top: 2.5%;
+    margin-left: 3%;
     border-radius: 5px;
     background-color: white;
     justify-content: center;
-    top: 135px;
     display: grid;
-    grid-template-rows: 390px;
-    grid-template-columns: 400px 540px;
+    grid-template-rows: 100%;
+    grid-template-columns: 36% 60%;
+    grid-row-start: 1;
+    grid-row-end: 2;
+    grid-column-start: 1;
+    grid-column-end: 2;
 
 }
 
 #announce
 {
-    width: 800px;
-    height: 390px;
-    position: absolute;
-    left: 55%;
-    top: 125px;
+    width: 84%;
+    height: 100%;
+    margin-left: 10%;
+    margin-top: 2.5%;
     background-color: white;
     display: grid;
-    grid-template-rows: 80px 290px;
-    grid-template-columns: 800px;
+    grid-template-rows: 26% 75%;
+    grid-template-columns: 100%;
+    border-radius: 5px;
+    grid-row-start: 1;
+    grid-row-end: 2;
+    grid-column-start: 2;
+    grid-column-end: 3;
+
 }
 
 #title_explanation
@@ -236,7 +256,12 @@ input[type="file"]::before {
     grid-row-end: 3;
     grid-column-start: 1;
     grid-column-end: 2;
-    margin-left: 70px;
+    margin-left: 21%;
+}
+
+#explanation
+{
+    margin-left: 13%;
 }
 
 #announce h4
@@ -264,7 +289,7 @@ input[type="file"]::before {
     font-size: 16px;
     cursor: pointer;
     font-family: 'Lexend Mega';
-    width: 400px; /* Ajuster la largeur des boutons */
+    width: 80%; /* Ajuster la largeur des boutons */
     text-align: center;
 }
 
@@ -274,37 +299,42 @@ input[type="file"]::before {
     grid-row-end: 3;
     grid-column-start: 1;
     grid-column-end: 2;
-    margin-left: 200px;
+    margin-left: 19%;
 }
 
 #rental_condition
 {
-    position: absolute;
-    width: 800px;
-    height: 390px;
+    width: 84%;
+    height: 98%;
     border-radius: 5px;
     background-color: white;
-    justify-content: center;
-    left: 55%;
-    top: 540px;
+    margin-left: 10%;
+    margin-top: 5%;
     display: grid;
-    grid-template-rows: 85px 50px 50px 50px 50px;
-    grid-template-columns: 800px;
+    grid-template-rows: 22% 15% 15% 15% 15%;
+    grid-template-columns: 100%;
+    grid-row-start: 2;
+    grid-row-end: 3;
+    grid-column-start: 2;
+    grid-column-end: 3;
 }
 
 #house_rectangle
 {
-    width: 940px;
-    height: 390px;
+    width: 100%;
+    height: 98%;
     border-radius: 5px;
     background-color: white;
     justify-content: center;
     display: grid;
-    grid-template-rows: 75px 240px 40px;
-    grid-template-columns: 940px;
-    margin-top: 25px;
-    margin-left: 60px;
-
+    grid-template-rows: 15% 62% 11%;
+    grid-template-columns: 100%;
+    margin-top: 5%;
+    margin-left: 3%;
+    grid-row-start: 2;
+    grid-row-end: 3;
+    grid-column-start: 1;
+    grid-column-end: 2;
 }
 
 #house_rectangle h3
@@ -323,15 +353,15 @@ input[type="file"]::before {
 
 #House_picture
 {
-    width: 200px;
-    height: 200px;
+    width: 19%;
+    height: 78%;
     overflow: hidden;
     border: 2px solid #ccc;
     grid-row-start: 2;
     grid-row-end: 3;
     grid-column-start: 1;
     grid-column-end: 2;
-    margin-left: 80px;
+    margin-left: 8.5%;
 }
 
 #container_house
@@ -340,8 +370,8 @@ input[type="file"]::before {
     grid-row-end: 3;
     grid-column-start: 1;
     grid-column-end: 2;
-    margin-top:20px;
-    margin-left: 350px;
+    margin-left: 35%;
+    margin-top: 2%;
 }
 
 
@@ -350,6 +380,7 @@ input[type="file"]::before {
 {
     width: 100%;
     height: auto;
+    object-fit: cover;
 }
 
 #button2
@@ -358,7 +389,7 @@ input[type="file"]::before {
     grid-row-end: 4;
     grid-column-start: 1;
     grid-column-end: 2;
-    margin-left: 100px;
+    margin-left: 9.5%;
 }
 
 #rental_condition h2 {
@@ -370,6 +401,7 @@ input[type="file"]::before {
     font-weight: bold;
     font-family: 'Lexend Mega';
     justify-self: center;
+    margin-top: 2.5%;
 
 
 }
@@ -380,7 +412,7 @@ input[type="file"]::before {
     grid-row-end: 3;
     grid-column-start: 1;
     grid-column-end: 2;
-    margin-left: 30px;
+    margin-left: 4%;
 }
 
 #Garden
@@ -389,7 +421,7 @@ input[type="file"]::before {
     grid-row-end: 4;
     grid-column-start: 1;
     grid-column-end: 2;
-    margin-left: 30px;
+    margin-left: 4%;
 }
 
 
@@ -403,7 +435,8 @@ input[type="file"]::before {
     grid-column-start: 2;
     grid-column-end: 3;
     justify-self: center;
-    margin-top: 100px;
+    margin-top: 14%;
+    margin-left: 5%;
     }
 
 .button
@@ -412,12 +445,12 @@ input[type="file"]::before {
     color: white;
     border: none;
     border-radius: 5px;
-    padding: 10px 20px;
+    padding: 15px 32px;
     margin-bottom: 10px;
     font-size: 16px;
     cursor: pointer;
     font-family: 'Lexend Mega';
-    width: 400px; /* Ajuster la largeur des boutons */
+    width: 100%; /* Ajuster la largeur des boutons */
     text-align: center;
 
 
