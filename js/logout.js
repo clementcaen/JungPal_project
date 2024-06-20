@@ -1,18 +1,18 @@
-document.getElementById("login").addEventListener("click", function(event) {
-    event.preventDefault();
+document.addEventListener("DOMContentLoaded", function() {
+    const logoutButton = document.getElementById("logout");
+    if (logoutButton) {
+        logoutButton.addEventListener("click", function(event) {
+            event.preventDefault();
 
-    let formData = new FormData(document.querySelector("form"));
-
-    ajaxRequest("POST", "http://localhost/JungPal_project/php/login.php", formData, function(response) {
-        if (response.success) {
-            // Rediriger vers la page d'accueil en cas de succès
-            window.location.href = "http://localhost/JungPal_project/html/homepage.html";
-            alert(response.message);
-        } else {
-            // Afficher le message d'erreur en cas d'échec
-            alert("Erreur: " + response.message);
-        }
-    });
+            // Appeler le script PHP de déconnexion
+            ajaxRequest("GET", "http://localhost/JungPal_project/php/logout.php", null, function(response) {
+                // Redirection vers la page de connexion après la déconnexion
+                window.location.href = "http://localhost/JungPal_project/html/connexion.html";
+            });
+        });
+    } else {
+        console.error("Le bouton de déconnexion avec l'ID 'logout' est introuvable.");
+    }
 });
 
 function ajaxRequest(method, url, data, callback) {
