@@ -239,15 +239,14 @@ a:visited
 #ad1
 {
     width: 27%;
-    height: 21%;
+    height: 53%;
     border-radius: 5px;
     background-color: #F5F5F5;
     grid-row-start: 4;
     grid-row-end: 5;
     grid-column-start: 1;
     grid-column-end: 2;
-    position: absolute;
-    margin-top: 29%;
+    margin-top: 3.8%;
     margin-left: 3%;
 
 }
@@ -255,30 +254,28 @@ a:visited
 #ad2
 {
     width: 27%;
-    height: 21%;
+    height: 53%;
     border-radius: 5px;
     background-color: #F5F5F5;
     grid-row-start: 4;
     grid-row-end: 5;
     grid-column-start: 1;
     grid-column-end: 2;
-    position: absolute;
-    margin-top: 29%;
+    margin-top: 3.8%;
     margin-left: 36.5%;
 }
 
 #ad3
 {
     width: 27%;
-    height: 21%;
+    height: 53.5%;
     border-radius: 5px;
     background-color: #F5F5F5;
     grid-row-start: 4;
     grid-row-end: 5;
     grid-column-start: 1;
     grid-column-end: 2;
-    position: absolute;
-    margin-top: 29%;
+    margin-top: 3.8%;
     margin-left: 70%;
 }
 

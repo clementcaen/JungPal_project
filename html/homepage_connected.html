@@ -18,7 +18,7 @@
 <header>
     <nav>
         <!-- Link to the homepage with a logo image -->
-        <a href="homepage_connected.html"><img id="logo" src="/Images/Logo.jpeg"></a>
+        <a href="javascript:history.back()"><img id="logo" src="/Images/Logo.jpeg"></a>
         <!-- Website title -->
         <h1>Elderly Companions</h1>
         <!-- Navigation link for the About Us section -->
@@ -29,7 +29,7 @@
             <img id="logo_connexion" src="/Images/connexion_logo.png" class="profile-logo">
             <div class="dropdown-menu">
                 <a href="Profile.html">Profil</a>
-                <a href="logout.html">Déconnexion</a>
+                <a id ="logout">Deconnexion</a>
             </div>
         </div>
 
@@ -59,7 +59,25 @@
     </div>
 </div>
 
+<div id="title_offer">
+    <p>Our offers</p>
+</div>
 
+<div id="ad1">
+
+</div>
+
+<div id="ad2">
+
+</div>
+
+<div id="ad3">
+
+</div>
+
+<button id="button_offers">Discover more offers</button>
+
+<div class="custom-hr1"></div>
 
 <div id="title_chatbox">
     <p>The chatbox</p>
@@ -72,9 +90,9 @@
     </p>
 </div>
 
-<button id="button_chatbox" type="submit">Join the chatbox</button>
+<button id="button_chatbox">Join the chatbox</button>
 
-<div class="custom-hr"></div>
+<div class="custom-hr2"></div>
 
 <div id="description">
     Who are we?
@@ -88,9 +106,8 @@
         Furthermore, after reading many articles about the loneliness of elderly people in Germany, we noticed that in most cases these people were alone. To solve these problems, we decided to create a website that would allow students
         to live among elderly people. Thanks to this, students will be able to find a place to live and at the same time bring companionship to these people.
     </p>
-    <img id="logo_descr" src="../Images/Logo-footer.png">
-
 </div>
+<img id="logo_descr" src="../Images/Logo-footer.png">
 
 
 <footer>
@@ -119,5 +136,8 @@
         E-mail:
     </div>
 </footer>
+<script src="../js/scroll.js"></script>
+
 </body>
+<script src="../js/logout.js"></script>
 </html>
