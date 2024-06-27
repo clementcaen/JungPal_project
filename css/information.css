@@ -1,0 +1,160 @@
+/*CSS Header*/
+
+nav
+{
+    display: grid;
+    grid-template-rows: 100%;
+    grid-template-columns: 4% 91% 2%;
+}
+
+header {
+    background: #FCFEFD;
+
+}
+
+#image {
+    height :100%;
+    width : 95%;
+    padding-left: 10%;
+    grid-row-start: 1;
+    grid-row-end: 2;
+    grid-column-start: 1;
+    grid-column-end: 2;
+}
+
+
+h1 {
+    margin-top: 1.5%;
+    font-family: 'Lexend Mega';
+    grid-row-start: 1;
+    grid-row-end: 2;
+    grid-column-start: 2;
+    grid-column-end: 3;
+}
+
+
+#home
+{
+    margin-top: 80%;
+    font-family: 'Lexend Mega';
+    font-weight: bold;
+    font-size: 15px;
+    grid-row-start: 1;
+    grid-row-end: 2;
+    grid-column-start: 3;
+    grid-column-end: 4;
+}
+
+
+a:link,
+a:visited
+{
+    text-decoration: none;
+    color: black;
+}
+
+/* CSS Form*/
+
+body
+{
+    background-color: #F5F5F5;
+    margin: 0;
+}
+
+.form-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+form {
+    width: 18%;
+    padding: 1.5%;
+    border: 1px solid #F5F5F5;
+    border-radius: 5px;
+    background-color: white;
+    box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.2), 0 5px 5px 0 rgba(0, 0, 0, 0.24);
+}
+
+label {
+    font-weight: bold;
+    font-family: 'Lexend Mega';
+    font-size: 10px;
+    margin-bottom: 5px;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="password"],
+input[type="date"] {
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 10px;
+    box-sizing: border-box;
+    font-family: 'Lexend Mega';
+    background-color: #F5F5F5;
+    border: white;
+
+}
+
+#container-bouton {
+    display: flex;
+    justify-content: space-between;
+}
+
+button {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+#back {
+    background-color: #E18B42;
+    color: white;
+    font-weight: bold;
+}
+
+#unlock {
+    background-color: #E18B42;
+    color: #fff;
+    font-weight: bold;
+}
+
+#lockButton
+{
+    background-color: #E18B42;
+    color: #fff;
+    font-weight: bold;
+}
+
+#title
+{
+    color:white;
+}
+
+h2
+{
+    font-family: 'Lexend Mega';
+    background-color: #E18B42;
+    border-radius: 5px;
+    padding: 0.5%;
+    margin-bottom: 2%;
+    margin-top: 2%;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

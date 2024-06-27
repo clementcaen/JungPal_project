@@ -13,9 +13,10 @@
     <link href="../css/Homepage.css" rel="stylesheet">
     <!-- Title of the web page -->
     <title>Elderly Companions</title>
+    <script src="../js/homepage.js"></script>
     <script>
         document.addEventListener("DOMContentLoaded", function() {
-            checkSession(); // Vérifier la session lors du chargement de la page
+            checkSession();
         });
     </script>
 </head>
@@ -29,11 +30,13 @@
         <!-- Website title -->
         <h1>Elderly Companions</h1>
         <!-- Navigation link for the About Us section -->
-        <a href="connexion.html"><div id="connexion">Sign in</div></a>
+        <div id="about"><button id="logout">Se déconnecter</button></div>
         <!-- Link to the sign-in page -->
         <a href="connexion.html"><div id="connexion">Sign in</div></a>
         <!-- Link to the registration page -->
         <a href="registration.html"><div id="register">Register</div></a>
+
+        <script src="../js/logout.js"></script>
         <!-- Placeholder for the Chatbox feature -->
         <div id="Chatbox">Chatbox</div>
     </nav>
@@ -65,18 +68,54 @@
 </div>
 
 <div id="ad1">
-
+    <div class="image-container">
+        <!-- <img src="" alt="Description of image"> -->
+    </div>
+    <div id="info_house">
+        <ul>
+            <li><span>Number of rooms:</span></li>
+            <li><span>Price per month:</span></li>
+            <li><span>Area:</span></li>
+            <li><span>Deposit required</span></li>
+            <li><span>Internet</span></li>
+            <li><span>Campus at ... min</span></li>
+        </ul>
+    </div>
 </div>
 
 <div id="ad2">
-
+    <div class="image-container_2">
+        <!-- <img src="" alt="Description of image"> -->
+    </div>
+    <div id="info_house_2">
+        <ul>
+            <li><span>Number of rooms:</span></li>
+            <li><span>Price per month:</span></li>
+            <li><span>Area:</span></li>
+            <li><span>Deposit required</span></li>
+            <li><span>Internet</span></li>
+            <li><span>Campus at ... min</span></li>
+        </ul>
+    </div>
 </div>
 
 <div id="ad3">
-
+    <div class="image-container_3">
+        <!-- <img src="" alt="Description of image"> -->
+    </div>
+    <div id="info_house_3">
+        <ul>
+            <li><span>Number of rooms:</span></li>
+            <li><span>Price per month:</span></li>
+            <li><span>Area:</span></li>
+            <li><span>Deposit required</span></li>
+            <li><span>Internet</span></li>
+            <li><span>Campus at ... min</span></li>
+        </ul>
+    </div>
 </div>
 
-<button id="button_offers">Discover more offers</button>
+<button id="button_offers"  onclick="window.location.href = 'Announce.html'">Discover more offers</button>
 
 <div class="custom-hr1"></div>
 
@@ -137,6 +176,6 @@
         E-mail:
     </div>
 </footer>
-<!-- <script src="../js/scroll.js"></script> -->
+<script src="../js/scroll.js"></script>
 </body>
 </html>

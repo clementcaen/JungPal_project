@@ -9,6 +9,9 @@
     <link href='https://fonts.googleapis.com/css?family=Lexend Mega' rel='stylesheet'>
     <!-- Title of the web page -->
     <title>Your profile</title>
+
+    <link rel="icon" href="../Images/Logo.jpeg" type="image/x-icon">
+
 </head>
 
 
@@ -17,7 +20,7 @@
 <header>
     <nav>
         <!-- Link to the homepage with a logo image -->
-        <a href="homepage.html"><img id="image" src="../Images/Logo.jpeg" alt="Elderly Companions Logo"></a>
+        <a href="homepage_connected.html"><img id="image" src="../Images/Logo.jpeg" alt="Elderly Companions Logo"></a>
         <!-- Website title -->
         <h1>Elderly Companions</h1>
         <!-- Link to the homepage -->
@@ -41,7 +44,7 @@
 
     <!-- Container for profile action buttons -->
     <div class="button-container">
-        <button class="button">Changing personal information</button>
+        <a href="information.html"><button class="button">Changing personal information</button></a>
         <button class="button">See your contract</button>
         <button class="button">Your email</button>
         <button class="button">Report a problem</button>
@@ -53,6 +56,8 @@
     <h2>Rental conditions</h2>
     <div id="Party">Party: <input type="text" id="part" placeholder="Yes / No" disabled></div>
     <div id="Garden">Garden help: <input type="text" id="gard" placeholder="Yes / No" disabled></div>
+    <div id="Cleaning">Cleaning: <input type="text" id="clean" placeholder="Yes / No" disabled></div>
+
 </div>
 
 <div id="house_rectangle">
@@ -66,7 +71,9 @@
         <div id="price_rooms">Price: <input class="block" type="text" id="price" placeholder="Price" disabled></div><br>
         <div id="area">Area: <input class="block" type="text" id="size" placeholder="Size of the room" disabled></div><br>
         <div id="Internet">Internet: <input class="block" type="text" id="connexion" placeholder="Yes / No" disabled></div><br>
-        <div id="Deposit">Deposit: <input class="block" type="text" id="dep" placeholder="Price of the deposit" disabled></div>
+        <div id="Deposit">Deposit: <input class="block" type="text" id="dep" placeholder="Price of the deposit" disabled></div><br>
+        <div id="Campus">Campus time: <input class="block" type="text" id="Camp" placeholder="Number of minutes" disabled></div>
+
     </div>
 </div>
 

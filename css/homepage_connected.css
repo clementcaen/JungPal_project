@@ -1,13 +1,16 @@
 nav {
     display: grid;
-    grid-template-rows: 100px;
+    grid-template-rows: 100% ;
     grid-template-columns: 5% 72% 9% 8% 6%;
 }
 
-body {
-    margin: 0;
+body
+{
+    margin:0;
     display: grid;
-    grid-template-rows: 7% 24% 2% 32% 25%;
+    grid-template-rows: 5.5% 20% 2% 21% 24% 19%;
+    background-color: #FCFEFD;
+
 }
 
 header {
@@ -17,16 +20,17 @@ header {
 #logo {
     height :100%;
     width : 100%;
-    padding-left: 15px;
+    padding-left: 17%;
     grid-row-start: 1;
     grid-row-end: 2;
     grid-column-start: 1;
     grid-column-end: 2;
 }
 
-h1 {
-    margin-top: 35px;
-    margin-left: 15px;
+h1
+{
+    margin-top: 2.6%;
+    margin-left: 1.6%;
     font-family: 'Lexend Mega';
     grid-row-start: 1;
     grid-row-end: 2;
@@ -35,7 +39,7 @@ h1 {
 }
 
 #Chatbox {
-    margin-top: 40px;
+    margin-top: 23.5%;
     font-family: 'Lexend Mega';
     font-weight: bold;
     font-size: 15px;
@@ -52,7 +56,7 @@ a:visited {
 }
 
 #about {
-    margin-top: 40px;
+    margin-top: 27%;
     font-family: 'Lexend Mega';
     font-weight: bold;
     font-size: 15px;
@@ -63,15 +67,15 @@ a:visited {
 }
 
 #logo_connexion {
-    padding-top: 28px;
-    height: 45%;
-    width: 40%;
+    padding-top: 25%;
+    height: 42%;
+    width: 38%;
     cursor: pointer;
     grid-row-start: 1;
     grid-row-end: 2;
     grid-column-start: 5;
     grid-column-end: 6;
-    padding-left: 12px;
+    padding-left: 10%;
 }
 
 .profile-menu {
@@ -112,12 +116,14 @@ a:visited {
 
 /*CSS page*/
 
-#image_home {
-    height: 100%;
-    width: 100%;
+#image_home
+{
+    height :100%;
+    width : 100%;
 }
 
-#rectangle {
+#rectangle
+{
     width: 1000px;
     height: 60px;
     background-color: #F5F5F5;
@@ -127,13 +133,17 @@ a:visited {
     grid-row-end: 4;
     justify-self: center;
     align-self: center;
-    margin-bottom: 40px;
     display: grid;
+    margin-bottom: 25px;
     grid-template-rows: 100% ;
     grid-template-columns: 30% 20% 30% 20%;
+
+
 }
 
-#place {
+#place
+{
+
     grid-row-start: 1;
     grid-row-end: 2;
     grid-column-start: 1;
@@ -142,16 +152,19 @@ a:visited {
     align-self: center;
 }
 
-#bar_place {
+#bar_place
+{
     font-family: 'Lexend Mega';
     border: 2px solid #F5F5F5;
     border-radius: 5px;
     width: 200px;
     height: 30px;
     text-align: center;
+
 }
 
-#date {
+#date
+{
     grid-row-start: 1;
     grid-row-end: 2;
     grid-column-start: 2;
@@ -160,16 +173,20 @@ a:visited {
     align-self: center;
 }
 
-#day {
+#day
+{
     font-family: 'Lexend Mega';
     border: 2px solid #F5F5F5;
     border-radius: 5px;
     width: 200px;
     height: 30px;
     text-align: center;
+
+
 }
 
-#price {
+#price
+{
     grid-row-start: 1;
     grid-row-end: 2;
     grid-column-start: 3;
@@ -178,16 +195,21 @@ a:visited {
     align-self: center;
 }
 
-#cost {
+
+
+#cost
+{
     font-family: 'Lexend Mega';
     border: 2px solid #F5F5F5;
     border-radius: 5px;
     width: 200px;
     height: 30px;
     text-align: center;
+
 }
 
-#search {
+#search
+{
     grid-row-start: 1;
     grid-row-end: 2;
     grid-column-start: 4;
@@ -197,7 +219,8 @@ a:visited {
     margin-right: 45px;
 }
 
-#button_search {
+#button_search
+{
     font-family: 'Lexend Mega';
     background-color: #E18B42;
     border-radius: 5px;
@@ -207,77 +230,197 @@ a:visited {
     height: 30px;
 }
 
-#title_chatbox
+#title_offer
 {
     font-family: 'Lexend Mega';
     font-weight: bold;
     font-size: 20px;
     justify-self: center;
-    padding-bottom: 15px;
-    padding-top: 20px;
-    text-align: justify;
-    padding-left: 200px;
-    padding-right: 200px;
     grid-row-start: 4;
     grid-row-end: 5;
     grid-column-start: 1;
     grid-column-end: 2;
 }
 
-#text_chatbox
+#ad1
+{
+    width: 27%;
+    height: 53%;
+    border-radius: 5px;
+    background-color: #F5F5F5;
+    grid-row-start: 4;
+    grid-row-end: 5;
+    grid-column-start: 1;
+    grid-column-end: 2;
+    margin-top: 3.8%;
+    margin-left: 3%;
+    display: grid;
+    grid-template-rows: 100%;
+    grid-template-columns: 40% 60%;
+
+}
+
+.image-container {
+    width: 75%;
+    height: 80%;
+    justify-self: center;
+    align-self: center;
+    background-color: white;
+    border-radius: 15px;
+    overflow: hidden;
+    grid-row-start: 1;
+    grid-row-end: 2;
+    grid-column-start: 1;
+    grid-column-end: 2;
+
+}
+
+.image-container img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+
+}
+
+#info_house, ul, li
 {
     font-family: 'Lexend Mega';
-    font-weight: bold;
-    font-size: 12px;
-    justify-self: center;
-    padding-bottom: 15px;
-    padding-top: 235px;
-    text-align: center;
-    padding-left: 200px;
-    padding-right: 200px;
-    grid-row-start: 4;
-    grid-row-end: 5;
-    grid-column-start: 1;
-    grid-column-end: 2;
+    font-size: 95%;
+    margin-left: 2%;
+    grid-row-start: 1;
+    grid-row-end: 2;
+    grid-column-start: 2;
+    grid-column-end: 3;
+    align-self: center;
+
 }
 
-#logo_chat
+#ad2
 {
-    height :30%;
-    width : 8%;
+    width: 27%;
+    height: 53%;
+    border-radius: 5px;
+    background-color: #F5F5F5;
     grid-row-start: 4;
     grid-row-end: 5;
     grid-column-start: 1;
     grid-column-end: 2;
-    justify-self: center;
-    padding-top: 85px;
-
-
-    margin-bottom: 15px;
+    margin-top: 3.8%;
+    margin-left: 36.5%;
+    display: grid;
+    grid-template-rows: 100%;
+    grid-template-columns: 40% 60%;
 }
 
-#button_chatbox
+.image-container_2 {
+    width: 75%;
+    height: 80%;
+    justify-self: center;
+    align-self: center;
+    background-color: white;
+    border-radius: 15px;
+    overflow: hidden;
+    grid-row-start: 1;
+    grid-row-end: 2;
+    grid-column-start: 1;
+    grid-column-end: 2;
+
+}
+
+.image-container_2 img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+
+}
+
+#info_house_2, ul, li
+{
+    font-family: 'Lexend Mega';
+    font-size: 95%;
+    margin-left: 3%;
+    grid-row-start: 1;
+    grid-row-end: 2;
+    grid-column-start: 2;
+    grid-column-end: 3;
+    align-self: center;
+
+}
+
+#ad3
+{
+    width: 27%;
+    height: 53.5%;
+    border-radius: 5px;
+    background-color: #F5F5F5;
+    grid-row-start: 4;
+    grid-row-end: 5;
+    grid-column-start: 1;
+    grid-column-end: 2;
+    margin-top: 3.8%;
+    margin-left: 70%;
+    display: grid;
+    grid-template-rows: 100%;
+    grid-template-columns: 40% 60%;
+}
+
+.image-container_3 {
+    width: 75%;
+    height: 80%;
+    justify-self: center;
+    align-self: center;
+    background-color: white;
+    border-radius: 15px;
+    overflow: hidden;
+    grid-row-start: 1;
+    grid-row-end: 2;
+    grid-column-start: 1;
+    grid-column-end: 2;
+
+}
+
+.image-container_3 img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+
+}
+
+#info_house_3, ul, li
+{
+    font-family: 'Lexend Mega';
+    font-size: 95%;
+    margin-left: 3%;
+    grid-row-start: 1;
+    grid-row-end: 2;
+    grid-column-start: 2;
+    grid-column-end: 3;
+    align-self: center;
+
+}
+
+#button_offers
 {
     font-family: 'Lexend Mega';
     background-color: #E18B42;
     border-radius: 5px;
     color: white;
     border: 2px solid #E18B42;
-    width: 175px;
-    height: 40px;
+    width: 13%;
+    height: 8%;
     grid-row-start: 4;
     grid-row-end: 5;
     grid-column-start: 1;
     grid-column-end: 2;
     justify-self: center;
-    margin-top: 325px;
+    margin-top: 16%;
 }
 
-.custom-hr
+.custom-hr1
 {
     height: 1px;
     background-color: black;
-    margin-top: 22%;
+    margin-top: 19%;
     margin-left: 25%;
     width: 50%;
     grid-row-start: 4;
@@ -287,157 +430,221 @@ a:visited {
 
 }
 
-#description
+#title_chatbox
 {
     font-family: 'Lexend Mega';
     font-weight: bold;
-    font-size: 22px;
-    text-align: center;
+    font-size: 25px;
+    justify-self: center;
+    text-align: justify;
+    justify-self: center;
     grid-row-start: 5;
     grid-row-end: 6;
     grid-column-start: 1;
     grid-column-end: 2;
+}
+
+#text_chatbox
+{
+    font-family: 'Lexend Mega';
+    font-weight: bold;
+    font-size: 14px;
+    justify-self: center;
+    padding-bottom: 15px;
+    padding-top: 12%;
+    text-align: center;
+    padding-left: 15%;
+    padding-right: 15%;
+    grid-row-start: 5;
+    grid-row-end: 6;
+    grid-column-start: 1;
+    grid-column-end: 2;
+}
+
+#logo_chat
+{
+    height :30%;
+    width : 8%;
+    grid-row-start: 5;
+    grid-row-end: 6;
+    grid-column-start: 1;
+    grid-column-end: 2;
+    justify-self: center;
+    padding-top: 4.5%;
+}
+
+#button_chatbox
+{
+    font-family: 'Lexend Mega';
+    background-color: #E18B42;
+    border-radius: 5px;
+    color: white;
+    border: 2px solid #E18B42;
+    width: 13%;
+    height: 8%;
+    grid-row-start: 5;
+    grid-row-end: 6;
+    grid-column-start: 1;
+    grid-column-end: 2;
+    justify-self: center;
+    margin-top: 17%;
+}
+
+.custom-hr2
+{
+    height: 1px;
+    background-color: black;
+    margin-top: 22%;
+    margin-left: 25%;
+    width: 50%;
+    grid-row-start: 5;
+    grid-row-end: 6;
+    grid-column-start: 1;
+    grid-column-end: 2;
+
+}
+
+#description
+{
+    font-family: 'Lexend Mega';
+    font-weight: bold;
+    font-size: 25px;
+    text-align: center;
+    grid-row-start: 6;
+    grid-row-end: 7;
+    grid-column-start: 1;
+    grid-column-end: 2;
+    margin-top: 1%;
 }
 
 #text
 {
     font-family: 'Lexend Mega';
     font-weight: bold;
-    font-size: 12px;
+    font-size: 14px;
     justify-self: center;
-    padding-top: 70px;
+    padding-top: 4%;
     text-align: justify;
-    padding-left: 200px;
-    padding-right: 200px;
-    grid-row-start: 5;
-    grid-row-end: 6;
+    padding-left: 15%;
+    padding-right: 15%;
+    grid-row-start: 6;
+    grid-row-end: 7;
     grid-column-start: 1;
     grid-column-end: 2;
 }
 
 #logo_descr
 {
-    height :120px;
-    width : 600px;
-    padding-top: 20px;
-    grid-row-start: 5;
-    grid-row-end: 6;
+    height :32%;
+    width : 29%;
+    padding-top: 9%;
+    grid-row-start: 6;
+    grid-row-end: 7;
     grid-column-start: 1;
     grid-column-end: 2;
-    margin-left: 430px;
+    justify-self: center;
+    align-self: center;
 
 }
 
 /*CSS footer*/
 
-footer {
-    display: grid;
-    grid-template-columns: 700px 265px 340px 400px;
-    grid-template-rows: 40px 130px;
+footer
+{
+    display :grid;
+    grid-template-columns: 34% 14% 20% 20%;
+    grid-template-rows: 14% 80% ;
     position: relative;
     font-size: .8em;
     background-color: #FCFEFD;
     border-top: 1px solid grey;
+
+
+
 }
 
 .vertical-line {
     position: absolute;
-    left: 32%;
+    left: 31%;
     border-left: 1px solid black;
     height: 70%;
-    top: 24px;
+    top : 15%;
 }
 
-.credit {
-    font-size: x-large;
+.credit
+{
+    font-size: 20px;
     text-align: left;
-    color: black;
+    color : black;
     grid-row-start: 1;
     grid-row-end: 2;
     grid-column-start: 2;
     grid-column-end: 3;
-    padding-top: 25px;
+    padding-top: 7.5%;
+
     font-family: 'Lexend Mega';
+
 }
 
-.credit_bis {
+.credit_bis
+{
     font-size: 10px;
     grid-row-start: 2;
     grid-row-end: 3;
     grid-column-start: 2;
     grid-column-end: 3;
     color: black;
-    padding-top: 30px;
+    padding-top: 13%;
     font-family: 'Lexend Mega';
+
+
 }
 
-.cont {
-    font-size: x-large;
-    margin-left: 70px;
-    color: black;
+.cont
+{
+    font-size: 20px;
+    margin-left: 17%;
+    color : black;
     grid-row-start: 1;
     grid-row-end: 2;
     grid-column-start: 3;
     grid-column-end: 4;
-    padding-top: 25px;
+    padding-top: 5%;
     font-family: 'Lexend Mega';
+
+
 }
 
-.cont_bis {
+
+.cont_bis
+{
     grid-row-start: 2;
     grid-row-end: 3;
     grid-column-start: 3;
     grid-column-end: 4;
-    margin-left: 70px;
+    margin-left: 18%;
     font-size: 10px;
     color: black;
-    padding-top: 30px;
+    padding-top: 9%;
     font-family: 'Lexend Mega';
+
+
 }
 
-#logo_footer {
+#logo_footer
+{
     grid-row-start: 2;
     grid-row-end: 3;
     grid-column-start: 1;
     grid-column-end: 2;
-    height: 100px;
-    width: 500px;
-    padding-left: 60px;
+    height :90%;
+    width : 75%;
+    padding-left: 7%;
 }
 
-@media screen and (min-width: 2000px) {
-    body {
-        width: 100%;
-    }
 
-    header {
-        width: 100%;
-    }
 
-    nav {
-        display: grid;
-        grid-template-rows: 100px;
-        grid-template-columns: 100px 1850px 160px 160px 145px 130px;
-    }
 
-    #image_home {
-        width: 100%;
-    }
 
-    footer {
-        display: grid;
-        grid-template-columns: 700px 265px 340px 1000px;
-        grid-template-rows: 40px 130px;
-        position: relative;
-        font-size: .8em;
 
-    }
 
-    .vertical-line {
-        position: absolute;
-        left: 25%;
-        border-left: 1px solid black;
-        height: 70%;
-        top: 24px;
-    }
-}
