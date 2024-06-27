@@ -13,7 +13,6 @@
     <link href="../css/Homepage.css" rel="stylesheet">
     <!-- Title of the web page -->
     <title>Elderly Companions</title>
-    <script src="../js/homepage.js"></script>
     <script>
         document.addEventListener("DOMContentLoaded", function() {
             checkSession(); // Vérifier la session lors du chargement de la page
@@ -30,13 +29,11 @@
         <!-- Website title -->
         <h1>Elderly Companions</h1>
         <!-- Navigation link for the About Us section -->
-        <div id="about"><button id="logout">Se déconnecter</button></div>
+        <a href="connexion.html"><div id="connexion">Sign in</div></a>
         <!-- Link to the sign-in page -->
         <a href="connexion.html"><div id="connexion">Sign in</div></a>
         <!-- Link to the registration page -->
         <a href="registration.html"><div id="register">Register</div></a>
-
-        <script src="../js/logout.js"></script>
         <!-- Placeholder for the Chatbox feature -->
         <div id="Chatbox">Chatbox</div>
     </nav>
@@ -140,6 +137,6 @@
         E-mail:
     </div>
 </footer>
-<script src="../js/scroll.js"></script>
+<!-- <script src="../js/scroll.js"></script> -->
 </body>
 </html>

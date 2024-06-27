@@ -2,7 +2,7 @@ function checkSession() {
     ajaxRequest("GET", "http://localhost/JungPal_project/php/check_session.php", null, function(response) {
         if (!response.loggedIn) {
             // Rediriger vers la page de connexion si l'utilisateur n'est pas connecté
-            window.location.href = "http://localhost/JungPal_project/html/connexion.html";
+            window.location.href = "http://localhost/JungPal_project/html/homepage.html";
         } else {
             // Afficher le nom de l'utilisateur connecté
             console.log("Utilisateur connecté : " + response.user_name);

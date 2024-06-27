@@ -11,6 +11,8 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
     <!-- Link to the external CSS stylesheet for styling the page -->
     <link href="../css/homepage_connected.css" rel="stylesheet">
+    <script src="../js/homepage.js"></script>
+    <script src="../js/logout.js"></script>
     <!-- Title of the web page -->
     <title>Elderly Companions</title>
 </head>
@@ -18,7 +20,7 @@
 <header>
     <nav>
         <!-- Link to the homepage with a logo image -->
-        <a href="homepage_connected.html"><img id="logo" src="/Images/Logo.jpeg"></a>
+        <a href="homepage_connected.html"><img id="logo" src="../Images/Logo.jpeg"></a>
         <!-- Website title -->
         <h1>Elderly Companions</h1>
         <!-- Navigation link for the About Us section -->
@@ -26,10 +28,10 @@
 
         <!-- Profile logo with dropdown menu -->
         <div class="profile-menu">
-            <img id="logo_connexion" src="/Images/connexion_logo.png" class="profile-logo">
+            <img id="logo_connexion" src="../Images/connexion_logo.png" class="profile-logo">
             <div class="dropdown-menu">
                 <a href="Profile.html">Profil</a>
-                <a href="logout.html">Déconnexion</a>
+                <a href="logout.html" id="logout">Déconnexion</a>
             </div>
         </div>
 
@@ -39,7 +41,7 @@
 </header>
 
 <!-- Main image on the homepage -->
-<img id="image_home" src="/Images/Home_photo.png">
+<img id="image_home" src="../Images/Home_photo.png">
 <div id="rectangle">
     <!-- Search bar section -->
     <div id="place">

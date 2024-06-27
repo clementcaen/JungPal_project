@@ -6,7 +6,7 @@ document.getElementById("login").addEventListener("click", function(event) {
     ajaxRequest("POST", "http://localhost/JungPal_project/php/login.php", formData, function(response) {
         if (response.success) {
             // Rediriger vers la page d'accueil en cas de succès
-            window.location.href = "http://localhost/JungPal_project/html/homepage.html";
+            window.location.href = "http://localhost/JungPal_project/html/homepage_connected.html";
             alert(response.message);
         } else {
             // Afficher le message d'erreur en cas d'échec
