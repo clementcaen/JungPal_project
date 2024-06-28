@@ -3,11 +3,18 @@ document.addEventListener("DOMContentLoaded", function() {
     if (logoutButton) {
         logoutButton.addEventListener("click", function(event) {
             event.preventDefault();
+            console.log("Logout button clicked");
 
             // Appeler le script PHP de déconnexion
             ajaxRequest("GET", "http://localhost/JungPal_project/php/logout.php", null, function(response) {
-                // Redirection vers la page de connexion après la déconnexion
-                window.location.href = "http://localhost/JungPal_project/html/connexion.html";
+                console.log("Logout response: ", response);
+                if (response.success) {
+                    console.log("Logout successful, redirecting...");
+                    // Redirection vers la page de connexion après la déconnexion
+                    window.location.href = "http://localhost/JungPal_project/html/homepage.html";
+                } else {
+                    console.error("Erreur lors de la déconnexion.");
+                }
             });
         });
     } else {
@@ -16,11 +23,13 @@ document.addEventListener("DOMContentLoaded", function() {
 });
 
 function ajaxRequest(method, url, data, callback) {
+    console.log(`Sending ${method} request to ${url}`);
     let xhr = new XMLHttpRequest();
-    xhr.open(method, url);
+    xhr.open(method, url, true);
     xhr.onload = function() {
         if (xhr.status === 200) {
             try {
+                console.log("Response received: ", xhr.responseText);
                 let jsonResponse = JSON.parse(xhr.responseText);
                 callback(jsonResponse);
             } catch (e) {
@@ -28,11 +37,15 @@ function ajaxRequest(method, url, data, callback) {
                 console.error("Réponse reçue:", xhr.responseText);
             }
         } else {
-            alert("Erreur de requête: " + xhr.status); // Afficher le code d'erreur HTTP
+            alert("Erreur de requête: " + xhr.status);
         }
     };
     xhr.onerror = function() {
-        alert("Erreur de connexion au serveur."); // Afficher une erreur en cas d'échec de la requête
+        alert("Erreur de connexion au serveur.");
     };
-    xhr.send(data);
+    if (data) {
+        xhr.send(data);
+    } else {
+        xhr.send();
+    }
 }

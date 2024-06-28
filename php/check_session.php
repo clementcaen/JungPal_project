@@ -1,12 +1,12 @@
 <?php
 session_start();
 
+$response = array("loggedIn" => false);
+
 if (isset($_SESSION['user_id'])) {
     // L'utilisateur est connecté
-    $response = array("loggedIn" => true, "user_name" => $_SESSION['user_name']);
-} else {
-    // L'utilisateur n'est pas connecté
-    $response = array("loggedIn" => false);
+    $response["loggedIn"] = true;
+    $response["user_name"] = $_SESSION['user_name'];
 }
 
 echo json_encode($response);

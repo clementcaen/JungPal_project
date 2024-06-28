@@ -1,7 +1,7 @@
 document.getElementById("signup").addEventListener("click", function(event) {
     event.preventDefault();
 
-    let formData = new FormData(document.querySelector("form-container"));
+    let formData = new FormData(document.getElementById("inscription-form"));
 
     ajaxRequest("POST", "http://localhost/JungPal_project/php/registration.php", formData, function(response) {
         if (response.success) {

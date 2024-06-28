@@ -14,9 +14,12 @@ if (ini_get("session.use_cookies")) {
 }
 
 // Détruire la session
+session_unset();
 session_destroy();
 
-// Rediriger vers la page de connexion ou autre page après la déconnexion
-header("Location: login.php");
-exit();
+// Retourner une réponse JSON pour indiquer que la déconnexion a réussi
+$response = array("success" => true);
+header('Content-Type: application/json');
+echo json_encode($response);
+
 ?>
