@@ -240,7 +240,7 @@ input[type="file"]::before {
     margin-top: 2.5%;
     background-color: white;
     display: grid;
-    grid-template-rows: 26% 75%;
+    grid-template-rows: 23% 75%;
     grid-template-columns: 100%;
     border-radius: 5px;
     grid-row-start: 1;
@@ -261,7 +261,7 @@ input[type="file"]::before {
 
 #explanation
 {
-    margin-left: 13%;
+    margin-left: 12%;
 }
 
 #announce h4
@@ -419,6 +419,15 @@ input[type="file"]::before {
 {
     grid-row-start: 3;
     grid-row-end: 4;
+    grid-column-start: 1;
+    grid-column-end: 2;
+    margin-left: 4%;
+}
+
+#Cleaning
+{
+    grid-row-start: 4;
+    grid-row-end: 5;
     grid-column-start: 1;
     grid-column-end: 2;
     margin-left: 4%;
