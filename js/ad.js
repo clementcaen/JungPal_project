@@ -1,4 +1,4 @@
-document.getElementById('send').addEventListener('click', function() {
+document.getElementById('lockButton').addEventListener('click', function() {
 
     // Create a FormData object from the form
     var formData = new FormData(document.getElementById('profileForm'));
