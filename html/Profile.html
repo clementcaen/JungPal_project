@@ -11,9 +11,7 @@
     <title>Your profile</title>
 
     <link rel="icon" href="../Images/Logo.jpeg" type="image/x-icon">
-
 </head>
-
 
 <body>
 
@@ -28,79 +26,82 @@
     </nav>
 </header>
 
-<div id="grid">
-<div id="rectangle_name">
-    <div id="Container_profil">
-        <!-- Container for the profile image -->
-        <div id="imageContainer"></div>
-        <!-- Display user's name -->
-        <div id="name">Name</div>
-        <!-- Display user's surname -->
-        <div id="surname">Surname</div>
-        <!-- File input for uploading profile photo -->
-        <input type="file" id="button" name="photo" accept="image/*" onchange="ajouterPhoto('button', 'imageContainer')">
-    </div>
-    <div class="ligne-verticale"></div>
+<form id="profileForm" action="../php/submit.php" method="post">
+    <div id="grid">
+        <div id="rectangle_name">
+            <div id="Container_profil">
+                <!-- Container for the profile image -->
+                <div id="imageContainer"></div>
+                <!-- Display user's name -->
+                <div id="name"></div>
+                <!-- Display user's surname -->
+                <div id="surname"></div>
+                <!-- File input for uploading profile photo -->
+                <input type="file" id="button" name="photo" accept="image/*" onchange="ajouterPhoto('button', 'imageContainer')">
+            </div>
+            <div class="ligne-verticale"></div>
 
-    <!-- Container for profile action buttons -->
-    <div class="button-container">
-        <a href="information.html"><button class="button">Changing personal information</button></a>
-        <button class="button">See your contract</button>
-        <button class="button">Your email</button>
-        <button class="button">Report a problem</button>
-    </div>
-</div>
-
-<div id="rental_condition">
-    <!-- Section for rental conditions -->
-    <h2>Rental conditions</h2>
-    <div id="Party">Party: <input type="text" id="part" placeholder="Yes / No" disabled></div>
-    <div id="Garden">Garden help: <input type="text" id="gard" placeholder="Yes / No" disabled></div>
-    <div id="Cleaning">Cleaning: <input type="text" id="clean" placeholder="Yes / No" disabled></div>
-
-</div>
-
-<div id="house_rectangle">
-    <!-- Section for house information -->
-    <h3>Your house</h3>
-    <div id="House_picture"></div>
-    <!-- File input for uploading house photo -->
-    <input type="file" id="button2" name="house-photo" accept="image/*" onchange="ajouterPhoto('button2', 'House_picture')">
-    <div id="container_house">
-        <div id="numbers_rooms">Number of rooms: <input class="block" type="text" id="rooms" placeholder="Number of rooms" disabled></div><br>
-        <div id="price_rooms">Price: <input class="block" type="text" id="price" placeholder="Price" disabled></div><br>
-        <div id="area">Area: <input class="block" type="text" id="size" placeholder="Size of the room" disabled></div><br>
-        <div id="Internet">Internet: <input class="block" type="text" id="connexion" placeholder="Yes / No" disabled></div><br>
-        <div id="Deposit">Deposit: <input class="block" type="text" id="dep" placeholder="Price of the deposit" disabled></div><br>
-        <div id="Campus">Campus time: <input class="block" type="text" id="Camp" placeholder="Number of minutes" disabled></div>
-
-    </div>
-</div>
-
-<div id="announce">
-    <!-- Section for ad management -->
-    <h4>Your ad</h4>
-    <div id="button_ad_container">
-        <button class="button_ad">Create your ad</button>
-        <button class="button_ad" id="unlock">Edit ad information</button>
-        <button class="button_ad" type="button" id="lockButton" style="display:none;">Confirm the modification</button>
-        <button class="button_ad">Delete your ad</button>
-        <div id="title_explanation">
-            <br>
-            How to create your ad? <br><br>
+            <!-- Container for profile action buttons -->
+            <div class="button-container">
+                <a href="information.html"><button class="button" type="button">Changing personal information</button></a>
+                <button class="button" type="button">See your contract</button>
+                <button class="button" type="button">Your mailbox</button>
+                <button class="button" type="button">Report a problem</button>
+            </div>
         </div>
-        <div id="explanation">
-            1. Click on Edit ad information<br>
-            2. Confirm the modification<br>
-            3. Click on the button "Create your ad"
+
+        <div id="rental_condition">
+            <!-- Section for rental conditions -->
+            <h2>Rental conditions</h2>
+            <div id="Party">Party: <input type="text" id="part" name="party" placeholder="Yes / No" disabled></div>
+            <div id="Garden">Garden help: <input type="text" id="gard" name="garden" placeholder="Yes / No" disabled></div>
+            <div id="Cleaning">Cleaning: <input type="text" id="clean" name="cleaning" placeholder="Yes / No" disabled></div>
+        </div>
+
+        <div id="house_rectangle">
+            <!-- Section for house information -->
+            <h3>Your house</h3>
+            <div id="House_picture"></div>
+            <!-- File input for uploading house photo -->
+            <input type="file" id="button2" name="house-photo" accept="image/*" onchange="ajouterPhoto('button2', 'House_picture')">
+            <div id="container_house">
+                <div id="numbers_rooms">Number of rooms: <input class="block" type="text" id="rooms" name="rooms" placeholder="Number of rooms" disabled></div><br>
+                <div id="price_rooms">Price: <input class="block" type="text" id="price" name="price" placeholder="Price" disabled></div><br>
+                <div id="area">Area: <input class="block" type="text" id="size" name="size" placeholder="Size of the room" disabled></div><br>
+                <div id="Internet">Internet: <input class="block" type="text" id="connexion" name="internet" placeholder="Yes / No" disabled></div><br>
+                <div id="Deposit">Deposit: <input class="block" type="text" id="dep" name="deposit" placeholder="Price of the deposit" disabled></div><br>
+                <div id="Campus">Campus time: <input class="block" type="text" id="Camp" name="campus-time" placeholder="Number of minutes" disabled></div>
+            </div>
+        </div>
+
+        <div id="announce">
+            <!-- Section for ad management -->
+            <h4>Your ad</h4>
+            <div id="button_ad_container">
+                <button class="button_ad" type="button" id="send">Create your ad</button>
+                <button class="button_ad" type="button" id="unlock">Edit ad information</button>
+                <button class="button_ad" type="button" id="lockButton" style="display:none;">Confirm the modification</button>
+                <button class="button_ad" type="button">Delete your ad</button>
+                <div id="title_explanation">
+                    <br>
+                    How to create your ad? <br><br>
+                </div>
+                <div id="explanation">
+                    1. Click on Edit ad information<br>
+                    2. Confirm the modification<br>
+                    3. Click on the button "Create your ad"
+                </div>
+            </div>
         </div>
     </div>
-</div>
+</form>
 
 <!-- Link to the JavaScript file for handling photo uploads -->
 <script src="../js/photo.js"></script>
 <!-- Link to the JavaScript file for handling information edits -->
 <script src="../js/edit_info.js"></script>
-</div>
+<script src="../js/profile.js"></script>
+<script src="../js/ad.js"></script>
+
 </body>
 </html>
