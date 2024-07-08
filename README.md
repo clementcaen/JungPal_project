@@ -6,21 +6,47 @@ The aim of this project is to create a platform to solve the accommodation probl
 
 # Key Features
 
-**Account Creation and Authentication:** A secure system for account creation and authentication for both students and elderly individuals. This ensures that only verified users can access the platform and benefit from its features.
+- **Account Creation and Authentication:** a secure system for account creation and authentication for both students and elderly individuals. This ensures that only verified users can access the platform and benefit from its features.
 
-**Profile Management:** Both students and elderly individuals can create and manage detailed profiles.
+- **Profile Management:** both students and elderly individuals can create and manage detailed profiles.
 
-**Communication Tools:** Integrated messaging functionalities to facilitate communication between students and potential elderly housemates. This helps in building trust and understanding before finalizing any living arrangements.
+- **Communication Tools:** a chatbox will be developed to facilitate communication between students and potential elderly housemates. This chatbox will allow students to find apartments according to their criteria, with an algorithm guiding their search. It will also enable elderly individuals to contact students directly.
 
-**Feedback and Rating System:** A feedback and rating system for both students and elderly individuals to share their experiences. This feature ensures transparency and helps future users make informed decisions.
+- **Advertisement Management:** elderly individuals can now create, edit, and delete accommodation listings, making it easier for them to manage their housing offers.
 
 # Technical Overview
 
 The platform incorporates both front-end and back-end technologies to provide a user-friendly interface and support complex functionalities:
 
-**Front-end:** Developed using HTML, CSS, and JavaScript, the front-end ensures a very simple and easy-to-use interface for elderly people.
+**Front-end:** 
+
+- **Technologies:** developed using HTML, CSS, and JavaScript, the front-end ensures a simple and intuitive interface for elderly people. HTML structures the content, CSS styles it to create a visually appealing and accessible design, and JavaScript adds interactivity and dynamic features.
+
+- **User interface (UI)**: the UI is designed with accessibility in mind, using large fonts, high-contrast colors, and simple navigation menus to cater to elderly users. Forms and buttons are designed to be easily clickable, and the layout is responsive to work well on various screens.
 
 **Back-end:** 
 
-**Database and Server:** The platform utilizes AWS (Amazon Web Services) for the server infrastructure. AWS provides a reliable, scalable, and secure environment for hosting the platform. 
+- **Database and Server:** the platform uses a local database for data storage. This approach provides direct and personalized management of data, ensuring high performance and security.
+
+- **Technologies:** the back-end is built using PHP and JavaScript. PHP is utilized for server-side scripting, allowing us to handle form submissions, manage sessions, and interact with the database. JavaScript is employed for creating dynamic and interactive features that enhance the user experience.
+
+- **Server:** in the future, a server on AWS will be set up to enhance scalability and reliability.
+
+# Installation and Configuration
+
+**Prerequisites:**
+
+- A local server with PHP installed.
+- A database server (e.g., MySQL, PostgreSQL).
+
+**Installation:**
+
+- Clone the project repository.
+- Set up the local database and import the provided SQL file.
+- Configure the database settings in the project's configuration file.
+
+**Running the Server:**
+
+- Start the local server.
+- Access the platform via the browser using the appropriate URL.
 
