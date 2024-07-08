@@ -66,7 +66,7 @@ $user_id = $_SESSION['user_id']; // assuming user_id is stored in the session af
         <div id="announce">
             <h4>Your ad</h4>
             <div id="button_ad_container">
-                <button class="button_ad" type="button">See your ad</button>
+                <a href="add.html?id=<?php echo $user_id; ?>"><button class="button_ad" type="button">See your ad</button></a>
                 <button class="button_ad" type="button" id="unlock">Edit ad information</button>
                 <button class="button_ad" type="button" id="submitAd">Create ad</button>
                 <button class="button_ad" type="button" id="deleteAd">Delete your ad</button>

@@ -208,7 +208,7 @@ a:visited {
     grid-column-start: 1;
     grid-column-end: 2;
     margin-top: 102%;
-    margin-left: 34%;
+    margin-left: 30%;
 }
 
 #surname
@@ -220,7 +220,7 @@ a:visited {
     grid-column-start: 1;
     grid-column-end: 2;
     margin-top: 115.5%;
-    margin-left: 29%;
+    margin-left: 30%;
 }
 
 #age
@@ -232,7 +232,7 @@ a:visited {
     grid-column-start: 1;
     grid-column-end: 2;
     margin-top: 129%;
-    margin-left: 28%;
+    margin-left: 30%;
 }
 
 .ligne-verticale {

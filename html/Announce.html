@@ -9,11 +9,11 @@
     <link rel="icon" href="../Images/Logo.jpeg" type="image/x-icon">
     <!-- Link to the Font Awesome library for icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
-    <meta charset="UTF-8">
+    <!-- Link to your CSS file -->
     <link href="../css/Announce.css" rel="stylesheet">
     <title>Announce</title>
 </head>
-
+<body>
 <header>
     <nav>
         <!-- Link to the homepage with a logo image -->
@@ -28,7 +28,7 @@
             <img id="logo_connexion" src="/Images/connexion_logo.png" class="profile-logo">
             <div class="dropdown-menu">
                 <a href="Profile.html">Profil</a>
-                <a id ="logout">Deconnexion</a>
+                <a id="logout">Deconnexion</a>
             </div>
         </div>
 
@@ -37,43 +37,10 @@
     </nav>
 </header>
 
-<body>
-
-<div id = "container">
-    <div class="image-container">
-        <!-- <img src="" alt="Description of image"> -->
-
-    </div>
-
-    <div id ="circle">
-        <!-- <img src="" alt="Description of image">-->
-    </div>
-    <div id="name">name</div>
-    <div id="surname">surname</div>
-    <div id="age">... years old</div>
-    <div class="ligne-verticale"></div>
-    <div id="info_house">
-        <ul>
-            <li><span>Number of rooms:</span></li>
-            <li><span>Price per month:</span></li>
-            <li><span>Area:</span></li>
-            <li><span>Deposit required</span></li>
-            <li><span>Internet connection</span></li>
-            <li><span>minutes from the Campus</span></li>
-        </ul>
-    </div>
-    <div class="ligne-verticale_2"></div>
-    <div id="Party">Party:</div>
-    <div id="Garden">Garden help:</div>
-    <div id="Cleaning">Cleaning:</div>
-    <div class="ligne-verticale_3"></div>
-    <button class="button">See the announce</button>
-
-
-
-
+<div id="announcements-container">
+    <!-- Announcements will be inserted here dynamically -->
 </div>
 
-
+<script src="../js/annoucements.js"></script>
 </body>
 </html>
