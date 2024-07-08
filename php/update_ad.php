@@ -1,4 +1,5 @@
 <?php
+header('Content-Type: application/json');
 include("bdd.php");
 
 $ad_id = isset($_POST['ad_id']) ? $_POST['ad_id'] : null;
@@ -18,21 +19,23 @@ if ($ad_id) {
     $stmt->bind_param("sssidsssii", $party, $garden, $cleaning, $rooms, $price, $size, $internet, $deposit, $campus_time, $ad_id);
     $success = $stmt->execute();
     $message = $success ? "Ad updated successfully" : "Error updating ad: " . $stmt->error;
+    
+    $stmt->close();
+    $conn->close();
+
+    // Prepare JSON response
+    $response = [
+        'success' => $success,
+        'message' => $message,
+        'ad_id' => $ad_id
+    ];
+
+    echo json_encode($response);
 } else {
-    // Insert new ad
-    $stmt = $conn->prepare("INSERT INTO ads (party, garden, cleaning, rooms, price, size, internet, deposit, campus_time) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)");
-    $stmt->bind_param("sssidsssi", $party, $garden, $cleaning, $rooms, $price, $size, $internet, $deposit, $campus_time);
-    $success = $stmt->execute();
-    $message = $success ? "New ad created successfully" : "Error creating ad: " . $stmt->error;
-    $ad_id = $stmt->insert_id;
+    // Handle case where ad_id is not set
+    echo json_encode([
+        'success' => false,
+        'message' => 'Invalid ad ID'
+    ]);
 }
-
-$stmt->close();
-$conn->close();
-
-echo json_encode([
-    'success' => $success,
-    'message' => $message,
-    'ad_id' => $ad_id
-]);
 ?>

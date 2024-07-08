@@ -88,5 +88,6 @@ $user_id = $_SESSION['user_id']; // assuming user_id is stored in the session af
 <script src="../js/profile.js"></script>
 <script src="../js/ad.js"></script>
 <script src="../js/delete_ad.js"></script>
+<script src="../js/update_ad.js"></script>
 </body>
 </html>
