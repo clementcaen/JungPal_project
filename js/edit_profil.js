@@ -38,6 +38,7 @@ document.addEventListener("DOMContentLoaded", function() {
             if (data.success) {
                 alert("Les informations de profil ont été mises à jour avec succès.");
                 document.querySelectorAll('input').forEach(input => input.disabled = true);
+                window.location.href = "http://localhost/JungPal_project/html/Profile.html";
             } else {
                 alert("Erreur: " + data.message);
             }

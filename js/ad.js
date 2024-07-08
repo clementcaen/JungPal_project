@@ -1,11 +1,9 @@
-document.getElementById('lockButton').addEventListener('click', function() {
-
-    // Create a FormData object from the form
+document.getElementById('unlock').addEventListener('click', function() {
     var formData = new FormData(document.getElementById('profileForm'));
+    console.log(...formData.entries()); // Print form data to the console for debugging
 
-    // Send the data via AJAX
     var xhr = new XMLHttpRequest();
-    xhr.open('POST', 'http://localhost:63342/JungPal_project/php/submit.php', true);
+    xhr.open('POST', 'http://localhost/JungPal_project/php/submit.php', true);
     xhr.onload = function () {
         if (xhr.status === 200) {
             alert('Your ad has been successfully created.');

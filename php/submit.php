@@ -1,8 +1,6 @@
 <?php
+include("bdd.php");
 
-include 'bdd.php';
-
-// Récupérer les données du formulaire
 $party = $_POST['party'];
 $garden = $_POST['garden'];
 $cleaning = $_POST['cleaning'];
@@ -13,7 +11,6 @@ $internet = $_POST['internet'];
 $deposit = $_POST['deposit'];
 $campus_time = $_POST['campus-time'];
 
-// Préparer et exécuter la requête d'insertion
 $stmt = $conn->prepare("INSERT INTO ads (party, garden, cleaning, rooms, price, size, internet, deposit, campus_time) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)");
 $stmt->bind_param("sssidsssi", $party, $garden, $cleaning, $rooms, $price, $size, $internet, $deposit, $campus_time);
 
