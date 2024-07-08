@@ -36,8 +36,8 @@ The platform incorporates both front-end and back-end technologies to provide a 
 
 **Prerequisites:**
 
-A local server with PHP installed.
-A database server (e.g., MySQL, PostgreSQL).
+- A local server with PHP installed.
+- A database server (e.g., MySQL, PostgreSQL).
 
 **Installation:**
 
