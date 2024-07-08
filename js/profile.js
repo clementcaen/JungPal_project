@@ -7,15 +7,15 @@ document.addEventListener("DOMContentLoaded", function() {
                 // Injecter les données du profil dans le DOM
                 document.getElementById('name').textContent = data.name;
                 document.getElementById('surname').textContent = data.surname;
-                // document.getElementById('part').value = data.party;
-                // document.getElementById('gard').value = data.garden_help;
-                // document.getElementById('clean').value = data.cleaning;
-                // document.getElementById('rooms').value = data.number_of_rooms;
-                // document.getElementById('price').value = data.price;
-                // document.getElementById('size').value = data.area;
-                // document.getElementById('connexion').value = data.internet;
-                // document.getElementById('dep').value = data.deposit;
-                // document.getElementById('Camp').value = data.campus_time;
+                document.getElementById('part').value = data.party || '';
+                document.getElementById('gard').value = data.garden || '';
+                document.getElementById('clean').value = data.cleaning || '';
+                document.getElementById('rooms').value = data.rooms || '';
+                document.getElementById('price').value = data.price || '';
+                document.getElementById('size').value = data.size || '';
+                document.getElementById('connexion').value = data.internet || '';
+                document.getElementById('dep').value = data.deposit || '';
+                document.getElementById('Camp').value = data.campus_time || '';
             } else {
                 alert("Erreur: " + data.message);
             }

@@ -17,8 +17,14 @@
     </nav>
 </header>
 
+<?php
+session_start();
+$user_id = $_SESSION['user_id']; // assuming user_id is stored in the session after login
+?>
+
 <form id="profileForm" action="../php/submit.php" method="post">
     <input type="hidden" id="adId" name="ad_id" value="">
+    <input type="hidden" id="userId" name="user_id" value="<?php echo $user_id; ?>">
     <div id="grid">
         <div id="rectangle_name">
             <div id="Container_profil">
@@ -63,7 +69,7 @@
                 <button class="button_ad" type="button">See your ad</button>
                 <button class="button_ad" type="button" id="unlock">Edit ad information</button>
                 <button class="button_ad" type="button" id="submitAd">Create ad</button>
-                <button class="button_ad" type="button" id="deleteAd" style="display:none;">Delete your ad</button>
+                <button class="button_ad" type="button" id="deleteAd">Delete your ad</button>
                 <div id="title_explanation">
                     <br>
                     How to create your ad? <br><br>
@@ -81,30 +87,6 @@
 <script src="../js/photo.js"></script>
 <script src="../js/profile.js"></script>
 <script src="../js/ad.js"></script>
-<script>
-document.getElementById('submitAd').addEventListener('click', function() {
-    var formData = new FormData(document.getElementById('profileForm'));
-    console.log(...formData.entries()); // Print form data to the console for debugging
-
-    var xhr = new XMLHttpRequest();
-    xhr.open('POST', 'http://localhost/JungPal_project/php/update_ad.php', true);
-    xhr.onload = function () {
-        if (xhr.status === 200) {
-            var response = JSON.parse(xhr.responseText);
-            alert(response.message);
-
-            if (response.success) {
-                document.getElementById('adId').value = response.ad_id;
-                document.getElementById('submitAd').textContent = 'Update ad';
-                document.getElementById('deleteAd').style.display = 'block';
-            }
-        } else {
-            alert('An error occurred while submitting your ad.');
-        }
-    };
-    xhr.send(formData);
-});
-</script>
-
+<script src="../js/delete_ad.js"></script>
 </body>
 </html>
