@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link href='https://fonts.googleapis.com/css?family=Lexend+Mega' rel='stylesheet'>
+    <meta charset="UTF-8">
+    <link rel="icon" href="../Images/Logo.jpeg" type="image/x-icon">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link href="../css/Announce.css" rel="stylesheet">
+    <title>Announce</title>
+</head>
+<body>
+<header>
+    <nav>
+        <a href="javascript:history.back()"><img id="logo" src="/Images/Logo.jpeg"></a>
+        <h1>Elderly Companions</h1>
+        <div id="about">About us</div>
+
+        <div class="profile-menu">
+            <img id="logo_connexion" src="/Images/connexion_logo.png" class="profile-logo">
+            <div class="dropdown-menu">
+                <a href="Profile.html">Profil</a>
+                <a id="logout">Deconnexion</a>
+            </div>
+        </div>
+
+        <div id="Chatbox">Chatbox</div>
+    </nav>
+</header>
+
+<div id="announcements-container">
+    <!-- Announcements will be inserted here -->
+</div>
+
+<script>
+document.addEventListener("DOMContentLoaded", function() {
+    // Function to get URL parameters
+    function getUrlParameter(name) {
+        name = name.replace(/[\[]/, '\\[').replace(/[\]]/, '\\]');
+        var regex = new RegExp('[\\?&]' + name + '=([^&#]*)');
+        var results = regex.exec(location.search);
+        return results === null ? '' : decodeURIComponent(results[1].replace(/\+/g, ' '));
+    }
+
+    const maxPrice = getUrlParameter('maxPrice');
+
+    fetch(`http://localhost/JungPal_project/php/fetch_all_ads.php?maxPrice=${maxPrice}`)
+        .then(response => {
+            if (!response.ok) {
+                throw new Error(`HTTP error! status: ${response.status}`);
+            }
+            return response.json(); // Parse JSON response
+        })
+        .then(data => {
+            if (data.success) {
+                const announcementsContainer = document.getElementById('announcements-container');
+                announcementsContainer.innerHTML = ''; // Clear existing ads
+
+                if (announcementsContainer) {
+                    data.ads.forEach(ad => {
+                        if (ad.price <= maxPrice) {
+                            const adElement = document.createElement('div');
+                            adElement.className = 'announcement';
+
+                            adElement.innerHTML = `
+                                <div id="container">
+                                    <div class="ligne-verticale"></div>
+                                    <div id="info_house">
+                                        <ul>
+                                            <li><span>Rooms: ${ad.rooms}</span></li>
+                                            <li><span>Price/month: €${ad.price}</span></li>
+                                            <li><span>Area: ${ad.size} sqm</span></li>
+                                            <li><span>Deposit: €${ad.deposit}</span></li>
+                                            <li><span>Internet connection: ${ad.internet ? 'Yes' : 'No'}</span></li>
+                                            <li><span>${ad.campus_time} minutes to Campus</span></li>
+                                        </ul>
+                                    </div>
+                                    <div class="ligne-verticale_2"></div>
+                                    <div id="Party">Party: ${ad.party}</div>
+                                    <div id="Garden">Garden help: ${ad.garden}</div>
+                                    <div id="Cleaning">Cleaning: ${ad.cleaning}</div>
+                                    <div class="ligne-verticale_3"></div>
+                                    <button class="button" data-ad-id="${ad.id}">See the announce</button>
+                                </div>
+                            `;
+
+                            announcementsContainer.appendChild(adElement);
+
+                            const seeAnnounceButton = adElement.querySelector('.button');
+                            if (seeAnnounceButton) {
+                                seeAnnounceButton.addEventListener('click', function() {
+                                    const adId = this.getAttribute('data-ad-id');
+                                    window.location.href = `add.html?id=${adId}`;
+                                });
+                            }
+                        }
+                    });
+                } else {
+                    console.error('Announcements container not found.');
+                }
+            } else {
+                console.error('Error:', data.message);
+            }
+        })
+        .catch(error => {
+            console.error('Error:', error);
+        });
+});
+</script>
+</body>
+</html>

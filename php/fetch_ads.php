@@ -3,7 +3,7 @@ header('Content-Type: application/json');
 include("bdd.php");
 
 try {
-    $stmt = $conn->prepare("SELECT * FROM ads"); // Assuming you have a 'visible' column to show only active ads
+    $stmt = $conn->prepare("SELECT * FROM ads");
     $stmt->execute();
     $result = $stmt->get_result();
     $ads = $result->fetch_all(MYSQLI_ASSOC);

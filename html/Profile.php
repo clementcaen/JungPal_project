@@ -19,7 +19,14 @@
 
 <?php
 session_start();
-$user_id = $_SESSION['user_id']; // assuming user_id is stored in the session after login
+$user_id = $_SESSION['user_id']; 
+include("../php/bdd.php");
+
+$stmt = $conn->prepare("SELECT id FROM ads WHERE ads.user_id = ?");
+    $stmt->bind_param("i", $user_id);
+    $stmt->execute();
+    $result = $stmt->get_result();
+    $ad = $result->fetch_assoc();
 ?>
 
 <form id="profileForm" action="../php/submit.php" method="post">
@@ -66,19 +73,10 @@ $user_id = $_SESSION['user_id']; // assuming user_id is stored in the session af
         <div id="announce">
             <h4>Your ad</h4>
             <div id="button_ad_container">
-                <a href="add.html?id=<?php echo $user_id; ?>"><button class="button_ad" type="button">See your ad</button></a>
+                <a href="add.html?id=<?php echo $ad['id']; ?>"><button class="button_ad" type="button">See your ad</button></a>
                 <button class="button_ad" type="button" id="unlock">Edit ad information</button>
                 <button class="button_ad" type="button" id="submitAd">Create ad</button>
                 <button class="button_ad" type="button" id="deleteAd">Delete your ad</button>
-                <div id="title_explanation">
-                    <br>
-                    How to create your ad? <br><br>
-                </div>
-                <div id="explanation">
-                    1. Click on Edit ad information<br>
-                    2. Confirm the modification<br>
-                    3. Click on the button "See your ad"
-                </div>
             </div>
         </div>
     </div>
