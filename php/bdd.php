@@ -1,16 +1,23 @@
 <?php
-// PHP Data Objects(PDO) Sample Code:
-try {
-    $conn = new PDO("sqlsrv:server = tcp:elderly.database.windows.net,1433; Database = elderly-database", "elderly", "Maxime3869");
-    $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-}
-catch (PDOException $e) {
-    print("Error connecting to SQL Server.");
-    die(print_r($e));
+ini_set('display_errors','on');
+error_reporting(E_ALL);
+
+header("Access-Control-Allow-Origin: *");
+header("Access-Control-Allow-Methods: GET, POST, OPTIONS");
+header("Access-Control-Allow-Headers: Content-Type, Authorization");
+
+// Connexion à la base de données (assurez-vous d'adapter ces informations à votre configuration)
+$servername = "localhost";
+$username = "root";
+$password = "";
+$dbname = "jungpal";
+
+// Création de la connexion
+$conn = new mysqli($servername, $username, $password, $dbname);
+
+// Vérifier la connexion
+if ($conn->connect_error) {
+    die("La connexion a échoué : " . $conn->connect_error);
 }
 
-// SQL Server Extension Sample Code:
-$connectionInfo = array("UID" => "elderly", "pwd" => "Maxime3869", "Database" => "elderly-database", "LoginTimeout" => 30, "Encrypt" => 1, "TrustServerCertificate" => 0);
-$serverName = "tcp:elderly.database.windows.net,1433";
-$conn = sqlsrv_connect($serverName, $connectionInfo);
 ?>
