@@ -7,10 +7,10 @@ header("Access-Control-Allow-Methods: GET, POST, OPTIONS");
 header("Access-Control-Allow-Headers: Content-Type, Authorization");
 
   // Connexion à la base de données (assurez-vous d'adapter ces informations à votre configuration)
-  $servername = "localhost";
-  $username = "root";
-  $password = "";
-  $dbname = "jungpal";
+  $servername = "elderly-database.mysql.database.azure.com";
+  $username = "elderlyDIT";
+  $password = "Max3869/";
+  $dbname = "elderly-database";
 
   // Création de la connexion
   $conn = new mysqli($servername, $username, $password, $dbname);
