@@ -1,6 +1,6 @@
 <?php
 
-include("../php/bdd.php");
+include("bdd.php");
 
 if (isset($_POST['email']) && isset($_POST['password'])) {
     // Récupération des données du formulaire
@@ -33,6 +33,5 @@ if (isset($_POST['email']) && isset($_POST['password'])) {
 
 // Fermer la connexion à la base de données
 $conn->close();
-
-echo json_encode($response);
+header('Content-Type: application/json');
 ?>
