@@ -1,4 +1,4 @@
-name: Build and deploy HTML app to Azure Web App - ederly-companions
+name: Build and deploy app to Azure Web App - ederly-companions
 
 on:
   push:
@@ -11,20 +11,26 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - uses: actions/checkout@v4
+      - name: Checkout code
+        uses: actions/checkout@v2
 
       - name: Prepare deployment content
         run: |
-          mkdir deployment
+          mkdir -p deployment
           cp -r html/* deployment/
+          cp -r css/* deployment/
+          cp -r js/* deployment/
+          cp -r php/* deployment/
+          cp -r Images/* deployment/
+          cp hostingstart.html deployment/
           cd deployment
           zip -r ../release.zip .
           cd ..
 
       - name: Upload artifact for deployment job
-        uses: actions/upload-artifact@v3
+        uses: actions/upload-artifact@v2
         with:
-          name: html-app
+          name: app-content
           path: release.zip
 
   deploy:
@@ -34,13 +40,13 @@ jobs:
       name: 'Production'
       url: ${{ steps.deploy-to-webapp.outputs.webapp-url }}
     permissions:
-      id-token: write #This is required for requesting the JWT
+      id-token: write # This is required for requesting the JWT
 
     steps:
       - name: Download artifact from build job
-        uses: actions/download-artifact@v3
+        uses: actions/download-artifact@v2
         with:
-          name: html-app
+          name: app-content
 
       - name: Unzip artifact for deployment
         run: unzip release.zip -d .
@@ -48,9 +54,9 @@ jobs:
       - name: Login to Azure
         uses: azure/login@v1
         with:
-          client-id: ${{ secrets.AZUREAPPSERVICE_CLIENTID_9585FDBE2E9549D992A5EC944B4DFFBB }}
-          tenant-id: ${{ secrets.AZUREAPPSERVICE_TENANTID_3E067A580967490E873BC1D712F5DCD6 }}
-          subscription-id: ${{ secrets.AZUREAPPSERVICE_SUBSCRIPTIONID_A34A849EBDC04B969D3F9EA310623872 }}
+          client-id: ${{ secrets.AZUREAPPSERVICE_CLIENTID }}
+          tenant-id: ${{ secrets.AZUREAPPSERVICE_TENANTID }}
+          subscription-id: ${{ secrets.AZUREAPPSERVICE_SUBSCRIPTIONID }}
 
       - name: 'Deploy to Azure Web App'
         uses: azure/webapps-deploy@v2
