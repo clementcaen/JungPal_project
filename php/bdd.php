@@ -20,4 +20,6 @@ header("Access-Control-Allow-Headers: Content-Type, Authorization");
       die("La connexion a échoué : " . $conn->connect_error);
   }
 
+  echo "Connexion succeed"
+
 ?>
