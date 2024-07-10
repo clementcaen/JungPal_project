@@ -17,7 +17,7 @@
 <header>
     <nav>
         <!-- Link to the homepage with a logo image -->
-        <a href="javascript:history.back()"><img id="logo" src="/Images/Logo.jpeg"></a>
+        <a href="javascript:history.back()"><img id="logo" src="../Images/Logo.jpeg"></a>
         <!-- Website title -->
         <h1>Elderly Companions</h1>
         <!-- Navigation link for the About Us section -->
@@ -25,9 +25,9 @@
 
         <!-- Profile logo with dropdown menu -->
         <div class="profile-menu">
-            <img id="logo_connexion" src="/Images/connexion_logo.png" class="profile-logo">
+            <img id="logo_connexion" src="../Images/connexion_logo.png" class="profile-logo">
             <div class="dropdown-menu">
-                <a href="Profile.html">Profil</a>
+                <a href="Profile.php">Profil</a>
                 <a id ="logout">Deconnexion</a>
             </div>
         </div>
@@ -37,7 +37,7 @@
     </nav>
 </header>
 <body>
-<div id="title">Rental house ... with ...</div>
+<div id="title"></div>
 <div id="grid">
 
 <div class="image-container">
@@ -49,12 +49,12 @@
     <div id="title_info">Informations about this rental</div>
     <div id="info_house">
         <ul>
-            <li><span>Number of rooms:</span></li>
-            <li><span>Price per month:</span></li>
-            <li><span>Area:</span></li>
-            <li><span>Deposit required</span></li>
-            <li><span>Internet connection</span></li>
-            <li><span>minutes from the Campus</span></li>
+            <li><span>Number of rooms: </span></li>
+            <li><span>Price per month: </span></li>
+            <li><span>Area: </span></li>
+            <li><span>Deposit required: </span></li>
+            <li><span>Internet connection: </span></li>
+            <li><span>minutes from the Campus: </span></li>
         </ul>
     </div>
     <hr class="horizontal-line">
@@ -112,6 +112,7 @@
         E-mail:
     </div>
 </footer>
-
+<script src="../js/get_ad.js"></script>
+<script src="../js/logout.js"></script>
 </body>
 </html>

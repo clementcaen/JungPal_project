@@ -19,7 +19,7 @@ if (isset($_POST['email']) && isset($_POST['password'])) {
         session_start();
         $_SESSION['user_id'] = $row['id'];
         $_SESSION['user_name'] = $nom_utilisateur;
-
+        
         $response = array("success" => true, "message" => "Bienvenue, " . $nom_utilisateur);
     } else {
         // Les informations de connexion sont incorrectes
