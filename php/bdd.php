@@ -1,25 +1,14 @@
 <?php
-  ini_set('display_errors','on');
-  error_reporting(E_ALL);
+$serverName = getenv('DB_SERVER');
+$database = getenv('DB_NAME');
+$username = getenv('DB_USER');
+$password = getenv('DB_PASS');
 
-header("Access-Control-Allow-Origin: *");
-header("Access-Control-Allow-Methods: GET, POST, OPTIONS");
-header("Access-Control-Allow-Headers: Content-Type, Authorization");
-
-  // Connexion à la base de données (assurez-vous d'adapter ces informations à votre configuration)
-  $servername = "elderly-database.mysql.database.azure.com";
-  $username = "elderlyDIT";
-  $password = "Maxime3869";
-  $dbname = "elderly-database";
-
-  // Création de la connexion
-  $conn = new mysqli($servername, $username, $password, $dbname);
-
-  // Vérifier la connexion
-  if ($conn->connect_error) {
-      die("La connexion a échoué : " . $conn->connect_error);
-  }
-
-  echo "Connexion succeed"
-
+try {
+    $conn = new PDO("sqlsrv:server=$serverName;Database=$database", $username, $password);
+    $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+    echo "Connexion réussie!";
+} catch (PDOException $e) {
+    echo "Erreur de connexion: " . $e->getMessage();
+}
 ?>
