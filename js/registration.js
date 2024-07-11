@@ -3,9 +3,9 @@ document.getElementById("signup").addEventListener("click", function(event) {
 
     let formData = new FormData(document.getElementById("inscription-form"));
 
-    ajaxRequest("POST", "http://localhost/JungPal_project/php/registration.php", formData, function(response) {
+    ajaxRequest("POST", "http://localhost/php/registration.php", formData, function(response) {
         if (response.success) {
-            window.location.href = "http://localhost/JungPal_project/html/connexion.html";
+            window.location.href = "http://localhost/html/connexion.html";
         } else {
             alert("Erreur: " + response.message); // Display error message
         }
