@@ -3,9 +3,9 @@ document.getElementById("signup").addEventListener("click", function(event) {
 
     let formData = new FormData(document.getElementById("inscription-form"));
 
-    ajaxRequest("POST", "https://jungpal.azurewebsites.net/php/registration.php", formData, function(response) {
+    ajaxRequest("POST", "https://main--gentle-yeot-d7d206.netlify.app/php/registration.php", formData, function(response) {
         if (response.success) {
-            window.location.href = "hhttps://jungpal.azurewebsites.net/html/connexion.html";
+            window.location.href = "https://main--gentle-yeot-d7d206.netlify.app/html/connexion.html";
         } else {
             alert("Erreur: " + response.message); // Display error message
         }
