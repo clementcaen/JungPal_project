@@ -21,7 +21,7 @@ header("Access-Control-Allow-Headers: Content-Type, Authorization");
 // }
     
 try {
-    $conn = new PDO("sqlsrv:server = tcp:jung-project.database.windows.net,1433; Database = jung-project", "jung-project", "{your_password_here}");
+    $conn = new PDO("sqlsrv:server = tcp:jung-project.database.windows.net,1433; Database = jung-project", "jung-project", "19e82fe8-2cd2-47a0-917c-cd16ebf5b389");
     $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 }
 catch (PDOException $e) {
