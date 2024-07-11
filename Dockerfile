@@ -17,7 +17,7 @@ COPY html /var/www/html/html
 COPY Images /var/www/html/images
 
 # Expose port 80
-EXPOSE 80
+EXPOSE 8080
 
 
 # Start Apache in the foreground
