@@ -3,9 +3,9 @@ document.getElementById("signup").addEventListener("click", function(event) {
 
     let formData = new FormData(document.getElementById("inscription-form"));
 
-    ajaxRequest("POST", "https://jungpalproject.azurewebsites.net/php/registration.php", formData, function(response) {
+    ajaxRequest("POST", "https://jungpal.azurewebsites.net/php/registration.php", formData, function(response) {
         if (response.success) {
-            window.location.href = "hhttps://jungpalproject.azurewebsites.net/html/connexion.html";
+            window.location.href = "hhttps://jungpal.azurewebsites.net/html/connexion.html";
         } else {
             alert("Erreur: " + response.message); // Display error message
         }
