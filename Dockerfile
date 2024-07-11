@@ -8,13 +8,13 @@ RUN docker-php-ext-install mysqli pdo pdo_mysql
 WORKDIR /var/www/html
 
 # Copy PHP backend files to the container
-COPY php /var/www/html
+COPY php /var/www/html/php
 
 # Copy the front-end files to the container
 COPY js /var/www/html/js
 COPY css /var/www/html/css
 COPY html /var/www/html/html
-COPY Images /var/www/images
+COPY Images /var/www/html/images
 
 # Expose port 80
 EXPOSE 80
