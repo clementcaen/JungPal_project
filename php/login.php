@@ -2,6 +2,10 @@
 
 include("bdd.php");
 
+header('Content-Type: application/json'); // Définir l'en-tête de la réponse comme JSON
+
+$response = array(); // Initialiser le tableau de réponse
+
 if (isset($_POST['email']) && isset($_POST['password'])) {
     // Récupération des données du formulaire
     $email = $_POST['email'];
@@ -33,4 +37,7 @@ if (isset($_POST['email']) && isset($_POST['password'])) {
 
 // Fermer la connexion à la base de données
 $conn->close();
+
+// Envoyer la réponse JSON au client
+echo json_encode($response);
 ?>
