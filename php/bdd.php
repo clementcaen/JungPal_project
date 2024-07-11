@@ -7,7 +7,7 @@ header("Access-Control-Allow-Methods: GET, POST, OPTIONS");
 header("Access-Control-Allow-Headers: Content-Type, Authorization");
 
 // Connexion à la base de données (assurez-vous d'adapter ces informations à votre configuration)
-$servername = "jungpal.mysql.database.azure.com";
+$servername = "jungpal-server.mysql.database.azure.com";
 $username = "vaipedxqaa";
 $password = "2T5$9R8$cQSCrL7m";
 $dbname = "jungpal-database";
