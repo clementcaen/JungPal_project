@@ -7,10 +7,13 @@ header("Access-Control-Allow-Methods: GET, POST, OPTIONS");
 header("Access-Control-Allow-Headers: Content-Type, Authorization");
 
 // Connexion à la base de données (assurez-vous d'adapter ces informations à votre configuration)
-$servername = "ddd.mysql.database.azure.com";
-$username = "jungproject";
-$password = "2T5$9R8$cQSCrL7m";
+$servername = "34.155.17.154";
+$username = "root";
+$password = "L.h+q2}kUJe#J/Ih";
 $dbname = "jungpal";
+
+  // Création de la connexion
+  $conn = new mysqli($servername, $username, $password, $dbname);
 
 // Création de la connexion
 $conn = new mysqli($servername, $username, $password, $dbname);
